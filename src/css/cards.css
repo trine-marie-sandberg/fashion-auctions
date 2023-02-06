@@ -1,0 +1,12 @@
+.card-wrap {
+    background-color: var(--grey-bg-card);
+    border: 1px var(--white) solid;
+    border-radius: 5px;
+    padding: 2rem 0;
+    margin: 1rem;
+}
+
+.card {
+    background-color: var(--white);
+    padding: 1rem;
+}
