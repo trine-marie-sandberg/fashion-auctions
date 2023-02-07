@@ -1,31 +1,26 @@
-@import url(/src/css/colors.css);
-@import url(/src/css/header.css);
+@import url(/src/css/variables-and-generic.css/sizing.css);
+@import url(/src/css/variables-and-generic.css/colors.css);
+@import url(/src/css/variables-and-generic.css/generic-styles.css);
+@import url(/src/css/layout-componments/header.css);
 @import url(/src/css/layout-componments/flexbox.css);
 @import url(/src/css/layout-componments/cards.css);
 @import url(/src/css/layout-componments/listings.css);
 @import url(/src/css/nav.css);
 
-body {
-    background-color: var(--grey-bg);
-}
-
-.img-auto {
-    height: auto;
-    width: 100%;
-}
-
-li {
-    list-style-type: none;
-}
-
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .topnav {
         display: none;
     }
+    header {
+        font-size: var(--sm);
+    }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
     #mobile-menu-btn {
         display: none;
+    }
+    header {
+        font-size: var(--med);
     }
 }

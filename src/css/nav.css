@@ -1,9 +1,8 @@
   .topnav li, .responsive li {
-    padding: 10px;
     text-decoration: none;
   }
   
-  .topnav a:hover {
+  .topnav li:hover {
     text-decoration: underline;
   }
   
@@ -17,5 +16,4 @@
  
   #mobile-menu-btn {
     color: var(--black);
-    padding: 5px;
   }

@@ -1,0 +1,17 @@
+body {
+    background-color: var(--grey-bg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.img-auto {
+    height: auto;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
