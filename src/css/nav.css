@@ -1,0 +1,21 @@
+  .topnav li, .responsive li {
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .topnav a:hover {
+    text-decoration: underline;
+  }
+  
+  .topnav a.active {
+    text-decoration: underline;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+ 
+  #mobile-menu-btn {
+    color: var(--black);
+    padding: 5px;
+  }

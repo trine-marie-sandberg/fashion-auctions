@@ -26,3 +26,19 @@
 .even-columns > * {
     flex-basis: 100%;
 }
+
+/* Content and sidebar */
+.content-and-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-and-sidebar > *:nth-child(1) {
+    flex: 1 1 20%;
+    min-width: 25ch;
+}
+
+.content-and-sidebar > *:nth-child(2) {
+    flex: 1 1 80%;
+    min-width: 15ch;
+}

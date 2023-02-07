@@ -1,0 +1,6 @@
+.listings-wrap {
+    height: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(auto, 1fr);
+}

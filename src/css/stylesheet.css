@@ -1,17 +1,31 @@
 @import url(/src/css/colors.css);
 @import url(/src/css/header.css);
-@import url(/src/css/layout-flex.css);
-@import url(/src/css/cards.css);
+@import url(/src/css/layout-componments/flexbox.css);
+@import url(/src/css/layout-componments/cards.css);
+@import url(/src/css/layout-componments/listings.css);
+@import url(/src/css/nav.css);
 
 body {
     background-color: var(--grey-bg);
 }
 
-.flex {
-    display: flex;
+.img-auto {
+    height: auto;
+    width: 100%;
 }
 
-.flex-between {
-    display: flex;
-    justify-content: space-between;
+li {
+    list-style-type: none;
+}
+
+@media (max-width: 800px) {
+    .topnav {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    #mobile-menu-btn {
+        display: none;
+    }
 }
