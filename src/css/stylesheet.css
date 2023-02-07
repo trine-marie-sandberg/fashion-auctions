@@ -7,7 +7,7 @@
 @import url(/src/css/layout-componments/listings.css);
 @import url(/src/css/nav.css);
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .topnav {
         display: none;
     }
@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     #mobile-menu-btn {
         display: none;
     }

@@ -53,3 +53,7 @@
 .fontsize-xl {
     font-size: var(--xl);
 }
+
+.half-size-h {
+    height: 50%;
+}
