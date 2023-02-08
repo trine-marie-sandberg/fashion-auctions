@@ -16,11 +16,17 @@ $colours: (
     .bg-#{$key} {
         background-color: $val
     }
+    .color-#{key} {
+        color: $val;
+    }
     .border-#{$key} {
         border: 1px solid;
         border-color: $val;
     }
     .border-dashed-#{$key} {
         border: 2px dashed $val;
+    }
+    .box-shaddow-#{$key} {
+        box-shadow: inset 0 2px 3px $val;
     }
 }
