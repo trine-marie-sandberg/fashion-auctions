@@ -11,3 +11,16 @@ $colours: (
   "grey-contrast-dark": #655E5E,
   "black": #2A2525,
 );
+
+@each $key, $val in $colours {
+    .bg-#{$key} {
+        background-color: $val
+    }
+    .border-#{$key} {
+        border: 1px solid;
+        border-color: $val;
+    }
+    .border-dashed-#{$key} {
+        border: 2px dashed $val;
+    }
+}
