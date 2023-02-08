@@ -1,4 +1,40 @@
 @import url(/src/css/stylesheet.css);
+a {
+  color: #395658;
+}
+
+a {
+  color: #FBE8BC;
+}
+
+a {
+  color: #fff;
+}
+
+a {
+  color: #EFF0F0;
+}
+
+a {
+  color: #F5F5F5;
+}
+
+a {
+  color: #E3E3E3;
+}
+
+a {
+  color: #A89E9E;
+}
+
+a {
+  color: #655E5E;
+}
+
+a {
+  color: #2A2525;
+}
+
 .bg-primary {
   background-color: #395658;
 }
@@ -186,6 +222,46 @@
 
 .box-shaddow-black {
   box-shadow: inset 0 2px 3px #2A2525;
+}
+
+.margin-key {
+  margin: 10px;
+}
+
+.padding-key {
+  padding: 10px;
+}
+
+.margin-key {
+  margin: 1rem;
+}
+
+.padding-key {
+  padding: 1rem;
+}
+
+.margin-key {
+  margin: 1.5rem;
+}
+
+.padding-key {
+  padding: 1.5rem;
+}
+
+.margin-key {
+  margin: 2rem;
+}
+
+.padding-key {
+  padding: 2rem;
+}
+
+.margin-key {
+  margin: 4rem;
+}
+
+.padding-key {
+  padding: 4rem;
 }
 
 /*# sourceMappingURL=index.css.map */

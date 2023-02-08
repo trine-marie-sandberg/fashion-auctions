@@ -12,6 +12,12 @@ $colours: (
   "black": #2A2525,
 );
 
+@each $black, $val in $colours {
+    a {
+        color: $val;
+    }
+}
+
 @each $key, $val in $colours {
     .bg-#{$key} {
         background-color: $val
@@ -29,4 +35,21 @@ $colours: (
     .box-shaddow-#{$key} {
         box-shadow: inset 0 2px 3px $val;
     }
-}
+};
+
+$sizes: (
+    "xs": 10px,
+    "sm": 1rem,
+    "med": 1.5rem,
+    "l": 2rem,
+    "xl": 4rem,
+);
+
+@each $key, $val in $sizes {
+    .margin-#{key} {
+        margin: $val
+    }
+    .padding-#{key} {
+        padding: $val
+    }
+};
