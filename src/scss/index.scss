@@ -1,0 +1,55 @@
+@import url(/src/css/stylesheet.css);
+
+$colours: (
+  "primary": #395658,
+  "secondary": #FBE8BC,
+  "white": #fff,
+  "grey-bg": #EFF0F0,
+  "grey-bg-card": #F5F5F5,
+  "grey-contrast-slight": #E3E3E3,
+  "grey-contrast-light": #A89E9E,
+  "grey-contrast-dark": #655E5E,
+  "black": #2A2525,
+);
+
+@each $black, $val in $colours {
+    a {
+        color: $val;
+    }
+}
+
+@each $key, $val in $colours {
+    .bg-#{$key} {
+        background-color: $val
+    }
+    .color-#{key} {
+        color: $val;
+    }
+    .border-#{$key} {
+        border: 1px solid;
+        border-color: $val;
+    }
+    .border-dashed-#{$key} {
+        border: 2px dashed $val;
+    }
+    .box-shaddow-#{$key} {
+        box-shadow: inset 0 2px 3px $val;
+    }
+};
+
+$sizes: (
+    "xs": 10px,
+    "sm": 1rem,
+    "med": 1.5rem,
+    "l": 2rem,
+    "xl": 4rem,
+);
+
+@each $key, $val in $sizes {
+    .margin-#{key} {
+        margin: $val
+    }
+    .padding-#{key} {
+        padding: $val
+    }
+};
