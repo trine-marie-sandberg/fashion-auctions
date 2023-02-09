@@ -1,0 +1,4 @@
+.btn {
+    padding: var(--sm) var(--med);
+    border-radius: 20px;
+}

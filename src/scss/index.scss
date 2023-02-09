@@ -20,7 +20,7 @@ $colours: (
 
 @each $key, $val in $colours {
     .bg-#{$key} {
-        background-color: $val
+        background-color: $val;
     }
     .color-#{key} {
         color: $val;
@@ -53,3 +53,5 @@ $colours: (
 //         padding: $val;
 //     }
 // };
+
+@debug map-keys($colours)
