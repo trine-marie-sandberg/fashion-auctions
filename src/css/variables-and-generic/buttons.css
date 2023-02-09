@@ -1,4 +1,5 @@
-.btn {
+.btn-main-center {
     padding: var(--sm) var(--med);
     border-radius: 20px;
+    margin: 0 auto;
 }

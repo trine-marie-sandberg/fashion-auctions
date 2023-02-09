@@ -14,7 +14,7 @@ $colours: (
 
 @each $black, $val in $colours {
     a {
-        color: $val;
+        color: #{$val};
     }
 }
 
@@ -36,6 +36,10 @@ $colours: (
         box-shadow: inset 0 2px 3px $val;
     }
 };
+
+.color-white {
+    color: #fff;
+}
 
 // $sizes: (
 //     "xs": 10px,
