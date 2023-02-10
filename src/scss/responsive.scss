@@ -12,9 +12,20 @@ $breakpoints: (
     }
 }
 
+// Breakpoint start (default = xs:0)
 @include breakpoint {
     .responsive-test {
         background-color: purple;
+    }
+    header {
+        padding: map-get($sizes, "xs");
+        font-size: map-get($sizes, "med");
+    }
+    .listings-wrap {
+        margin: map-get($sizes, "xs");
+    }
+    .content-and-sidebar {
+        flex-wrap: wrap;
     }
 }
 
@@ -23,21 +34,41 @@ $breakpoints: (
         background-color: map-get($colours, "primary");
     }
 }
+
 @include breakpoint(map-get($breakpoints, "med")) {
     .responsive-test {
         background-color: map-get($colours, "secondary");
     }
+    #mobile-menu-btn {
+        display: none;
+    }
 }
+
 @include breakpoint(map-get($breakpoints, "lg")) {
     .responsive-test {
         background-color: map-get($colours, "grey-contrast-light");
     }
+    .content-and-sidebar {
+        flex-wrap: nowrap;
+    }
 }
+
 @include breakpoint(map-get($breakpoints, "xl")) {
     .responsive-test {
         background-color: map-get($colours, "black");
     }
     header {
-        padding: map-get($sizes, "l");
+        padding: 0 map-get($sizes, "xs");
+        font-size: map-get($sizes, "med");
+    }
+    .listings-wrap {
+        margin: map-get($sizes, "lg");
+    }
+}
+
+// max-width
+@media (max-width: map-get($breakpoints, "med")) {
+    .topnav {
+        display: none;
     }
 }

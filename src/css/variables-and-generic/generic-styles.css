@@ -21,6 +21,7 @@ p {
 .img-auto {
     height: auto;
     width: 100%;
+    border-radius: 25px;
 }
 
 li {

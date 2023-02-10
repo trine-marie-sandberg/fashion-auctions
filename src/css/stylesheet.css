@@ -6,31 +6,3 @@
 @import url(/src/css/layout-componments/cards.css);
 @import url(/src/css/layout-componments/listings.css);
 @import url(/src/css/nav.css);
-
-@media (max-width: 1000px) {
-    .content-and-sidebar {
-        flex-wrap: wrap;
-    }
-}
-@media (max-width: 700px) {
-    .topnav {
-        display: none;
-    }
-    header {
-        font-size: var(--sm);
-        padding: var(--xs);
-    }
-}
-
-@media (min-width: 700px) {
-    #mobile-menu-btn {
-        display: none;
-    }
-    header {
-        font-size: var(--med);
-        padding: var(--sm);
-    }
-    .listings-wrap {
-        margin: var(--l);
-    }
-}

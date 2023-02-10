@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://use.typekit.net/moa7llh.css">
 </head>
 <body class="bg-grey-bg">
-    <div style="height: 50px; width: 50px; border: 1px solid black;" class="responsive-test"></div>
     <header class="flex flex-between flex-center-h bg-white color-black">
         <div class="flex flex-center-h">
             <img src="./src/assets/img/logo.png" class="logo img-auto">
@@ -41,15 +40,22 @@
                         <li>Sort</li>
                     </ul>
                 </div>
-                <div class="listings-wrap margin-xs">
+                <div class="listings-wrap">
+                    <div style="height: 50px; width: 50px; border: 1px solid black;" class="responsive-test"></div>
+                    <h1>Listings</h1>
                     <div class="card-wrap bg-grey-bg-card border-white">
                         <div class="card even-columns bg-white">
-                            <div>
-                                <p>Name: name</p>
+                            <div class="listing-info-wrap">
+                                <h3>Seller:</h3>
+                                <p class="seller">Name</p>
+                                <h3>Price:</h3>
+                                <p class="price">$</p>
+                                <h3>Description</h3>
+                                <p>No description</p>
                             </div>
                             <div>
-                                <h2 class="text-img-placeholder">No image avaiable</h2>
-                                <img src="./src/assets/img/placeholder-img.jpg" class="img-placeholder img-auto">
+                                <h2 class="listing-name">Item name</h2>
+                                <img src="./src/assets/img/placeholder-img.jpg" class="listing-img img-auto border-grey-contrast-slight">
                             </div>
                         </div>
                     </div>
