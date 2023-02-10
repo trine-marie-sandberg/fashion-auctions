@@ -22,7 +22,7 @@ $colours: (
     .bg-#{$key} {
         background-color: $val;
     }
-    .color-#{key} {
+    .color-#{$key} {
         color: $val;
     }
     .border-#{$key} {
@@ -32,30 +32,27 @@ $colours: (
     .border-dashed-#{$key} {
         border: 2px dashed $val;
     }
+    .border-t-dashed-#{$key} {
+        border-top: 2px dashed $val;
+    }
     .box-shaddow-#{$key} {
         box-shadow: inset 0 2px 3px $val;
     }
 };
 
-.color-white {
-    color: #fff;
-}
+$sizes: (
+    "xs": 10px,
+    "sm": 1rem,
+    "med": 1.5rem,
+    "l": 2rem,
+    "xl": 4rem,
+);
 
-// $sizes: (
-//     "xs": 10px,
-//     "sm": 1rem,
-//     "med": 1.5rem,
-//     "l": 2rem,
-//     "xl": 4rem,
-// );
-
-// @each $key, $val in $sizes {
-//     .margin-#{key} {
-//         margin: $val;
-//     }
-//     .padding-#{key} {
-//         padding: $val;
-//     }
-// };
-
-@debug map-keys($colours)
+@each $key, $val in $sizes {
+    .margin-#{$key} {
+        margin: $val;
+    }
+    .padding-#{$key} {
+        padding: $val;
+    }
+};
