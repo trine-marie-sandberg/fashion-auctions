@@ -18,6 +18,7 @@
     }
     header {
         font-size: var(--sm);
+        padding: var(--xs);
     }
 }
 
@@ -27,6 +28,7 @@
     }
     header {
         font-size: var(--med);
+        padding: var(--sm);
     }
     .listings-wrap {
         margin: var(--l);
