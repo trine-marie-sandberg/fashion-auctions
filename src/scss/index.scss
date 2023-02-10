@@ -55,6 +55,9 @@ $sizes: (
     .padding-#{$key} {
         padding: $val;
     }
+    .border-radius-#{$key} {
+        border-radius: $val;
+    }
 };
 
 @import "responsive";

@@ -268,12 +268,20 @@ a {
   padding: 10px;
 }
 
+.border-radius-xs {
+  border-radius: 10px;
+}
+
 .margin-sm {
   margin: 1rem;
 }
 
 .padding-sm {
   padding: 1rem;
+}
+
+.border-radius-sm {
+  border-radius: 1rem;
 }
 
 .margin-med {
@@ -284,6 +292,10 @@ a {
   padding: 1.5rem;
 }
 
+.border-radius-med {
+  border-radius: 1.5rem;
+}
+
 .margin-lg {
   margin: 2rem;
 }
@@ -292,12 +304,20 @@ a {
   padding: 2rem;
 }
 
+.border-radius-lg {
+  border-radius: 2rem;
+}
+
 .margin-xl {
   margin: 4rem;
 }
 
 .padding-xl {
   padding: 4rem;
+}
+
+.border-radius-xl {
+  border-radius: 4rem;
 }
 
 @media (min-width: 0) {
@@ -313,6 +333,17 @@ a {
   }
   .content-and-sidebar {
     flex-wrap: wrap;
+  }
+  .logo {
+    height: auto;
+    width: 50px;
+  }
+  .btn {
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+  }
+  .search {
+    width: 20vw;
   }
 }
 @media (min-width: 480px) {

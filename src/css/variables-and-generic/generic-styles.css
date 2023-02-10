@@ -21,7 +21,13 @@ p {
 .img-auto {
     height: auto;
     width: 100%;
-    border-radius: 25px;
+}
+.center {
+    margin: 0 auto;
+}
+
+.half-size-h {
+    height: 50%;
 }
 
 li {

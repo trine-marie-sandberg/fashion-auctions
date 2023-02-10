@@ -27,6 +27,17 @@ $breakpoints: (
     .content-and-sidebar {
         flex-wrap: wrap;
     }
+    .logo {
+        height: auto;
+        width: 50px;
+    }
+    .btn {
+        padding: map-get($sizes, sm) map-get($sizes, lg);
+        border-radius: map-get($sizes, med);
+    }
+    .search {
+        width: 20vw;
+    }
 }
 
 @include breakpoint(map-get($breakpoints, "sm")) {
