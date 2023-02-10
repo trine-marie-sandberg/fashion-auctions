@@ -1,0 +1,43 @@
+$breakpoints: (
+    "xs": 0,
+    "sm": 480px,
+    "med": 720px,
+    "lg": 960px,
+    "xl": 1200px,
+);
+
+@mixin breakpoint($bp: map-get($breakpoints, "xs")) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+@include breakpoint {
+    .responsive-test {
+        background-color: purple;
+    }
+}
+
+@include breakpoint(map-get($breakpoints, "sm")) {
+    .responsive-test {
+        background-color: map-get($colours, "primary");
+    }
+}
+@include breakpoint(map-get($breakpoints, "med")) {
+    .responsive-test {
+        background-color: map-get($colours, "secondary");
+    }
+}
+@include breakpoint(map-get($breakpoints, "lg")) {
+    .responsive-test {
+        background-color: map-get($colours, "grey-contrast-light");
+    }
+}
+@include breakpoint(map-get($breakpoints, "xl")) {
+    .responsive-test {
+        background-color: map-get($colours, "black");
+    }
+    header {
+        padding: map-get($sizes, "l");
+    }
+}

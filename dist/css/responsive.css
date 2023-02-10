@@ -1,0 +1,19 @@
+/* Error: Undefined variable.
+ *    ,
+ * 23 |         background-color: map-get($colours, "primary");
+ *    |                                   ^^^^^^^^
+ *    '
+ *   src\scss\responsive.scss 23:35  @content
+ *   src\scss\responsive.scss 11:9   breakpoint()
+ *   src\scss\responsive.scss 21:1   root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined variable.\a    \2577 \a 23 \2502          background-color: map-get($colours, "primary");\d\a    \2502                                    ^^^^^^^^\a    \2575 \a   src\\scss\\responsive.scss 23:35  @content\a   src\\scss\\responsive.scss 11:9   breakpoint()\a   src\\scss\\responsive.scss 21:1   root stylesheet';
+}
