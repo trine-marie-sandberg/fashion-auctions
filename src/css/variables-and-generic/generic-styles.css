@@ -6,6 +6,18 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3 {
+    font-family: "dejanire-headline", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+p {
+    font-family: "etna", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
 .img-auto {
     height: auto;
     width: 100%;
