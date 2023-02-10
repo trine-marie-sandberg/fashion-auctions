@@ -268,6 +268,14 @@ a {
   padding: 10px;
 }
 
+.padding-top-btm-xs {
+  padding: 10px 0;
+}
+
+.padding-left-right-xs {
+  padding: 0 10px;
+}
+
 .border-radius-xs {
   border-radius: 10px;
 }
@@ -278,6 +286,14 @@ a {
 
 .padding-sm {
   padding: 1rem;
+}
+
+.padding-top-btm-sm {
+  padding: 1rem 0;
+}
+
+.padding-left-right-sm {
+  padding: 0 1rem;
 }
 
 .border-radius-sm {
@@ -292,6 +308,14 @@ a {
   padding: 1.5rem;
 }
 
+.padding-top-btm-med {
+  padding: 1.5rem 0;
+}
+
+.padding-left-right-med {
+  padding: 0 1.5rem;
+}
+
 .border-radius-med {
   border-radius: 1.5rem;
 }
@@ -304,6 +328,14 @@ a {
   padding: 2rem;
 }
 
+.padding-top-btm-lg {
+  padding: 2rem 0;
+}
+
+.padding-left-right-lg {
+  padding: 0 2rem;
+}
+
 .border-radius-lg {
   border-radius: 2rem;
 }
@@ -314,6 +346,14 @@ a {
 
 .padding-xl {
   padding: 4rem;
+}
+
+.padding-top-btm-xl {
+  padding: 4rem 0;
+}
+
+.padding-left-right-xl {
+  padding: 0 4rem;
 }
 
 .border-radius-xl {
@@ -381,8 +421,107 @@ a {
 }
 @media (max-width: 720px) {
   .topnav {
-    display: none;
+    display: none !important;
   }
+}
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-center-h {
+  align-items: center;
+}
+
+.flex-center-v {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Even columns */
+.even-columns {
+  display: flex;
+}
+
+.even-columns > * {
+  flex-basis: 100%;
+}
+
+/* Content and sidebar */
+.content-and-sidebar {
+  display: flex;
+}
+
+.content-and-sidebar > *:nth-child(1) {
+  flex: 1 1 10%;
+  flex-grow: 1;
+}
+
+.content-and-sidebar > *:nth-child(2) {
+  min-width: 90%;
+  flex: 1 1 90%;
+  flex-grow: 2;
+}
+
+.topnav li:hover {
+  text-decoration: underline;
+}
+
+.topnav a.active {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "dejanire-headline", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+p {
+  font-family: "etna", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.img-auto {
+  height: auto;
+  width: 100%;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.half-size-h {
+  height: 50%;
+}
+
+li {
+  list-style-type: none;
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

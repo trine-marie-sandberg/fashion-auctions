@@ -80,6 +80,6 @@ $breakpoints: (
 // max-width
 @media (max-width: map-get($breakpoints, "med")) {
     .topnav {
-        display: none;
+        display: none !important;
     }
 }

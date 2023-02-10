@@ -55,9 +55,18 @@ $sizes: (
     .padding-#{$key} {
         padding: $val;
     }
+    .padding-top-btm-#{$key} {
+        padding: $val 0;
+    }
+    .padding-left-right-#{$key} {
+        padding: 0 $val;
+    }
     .border-radius-#{$key} {
         border-radius: $val;
     }
 };
 
 @import "responsive";
+@import "flexbox";
+@import "components";
+@import "generic";

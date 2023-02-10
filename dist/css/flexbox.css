@@ -1,0 +1,50 @@
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-center-h {
+  align-items: center;
+}
+
+.flex-center-v {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* Even columns */
+.even-columns {
+  display: flex;
+}
+
+.even-columns > * {
+  flex-basis: 100%;
+}
+
+/* Content and sidebar */
+.content-and-sidebar {
+  display: flex;
+}
+
+.content-and-sidebar > *:nth-child(1) {
+  flex: 1 1 10%;
+  flex-grow: 1;
+}
+
+.content-and-sidebar > *:nth-child(2) {
+  min-width: 90%;
+  flex: 1 1 90%;
+  flex-grow: 2;
+}
+
+/*# sourceMappingURL=flexbox.css.map */

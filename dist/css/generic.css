@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-family: "dejanire-headline", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+p {
+  font-family: "etna", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.img-auto {
+  height: auto;
+  width: 100%;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.half-size-h {
+  height: 50%;
+}
+
+li {
+  list-style-type: none;
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=generic.css.map */
