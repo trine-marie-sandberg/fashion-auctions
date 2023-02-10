@@ -462,21 +462,27 @@ a {
 }
 
 .content-and-sidebar > *:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
   flex: 1 1 10%;
   flex-grow: 1;
 }
 
 .content-and-sidebar > *:nth-child(2) {
-  min-width: 90%;
   flex: 1 1 90%;
   flex-grow: 2;
 }
 
-.topnav li:hover {
+footer {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.navlink :hover {
   text-decoration: underline;
 }
 
-.topnav a.active {
+.navlink a.active {
   text-decoration: underline;
 }
 
@@ -516,11 +522,6 @@ p {
 
 li {
   list-style-type: none;
-}
-
-footer {
-  margin-top: auto;
-  margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,7 +1,12 @@
-  .topnav li:hover {
-    text-decoration: underline;
-  }
-  
-  .topnav a.active {
-    text-decoration: underline;
-  }
+  footer {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.navlink :hover {
+  text-decoration: underline;
+}
+
+.navlink a.active {
+  text-decoration: underline;
+}

@@ -17,8 +17,8 @@
             <img src="./src/assets/img/logo.png" class="logo">
             <nav class="nav flex flex-center-v">
                 <ul class="topnav flex" id="topnav">
-                    <li class="padding-xs"><a href="/index.html">Listings</a></li>
-                    <li class="padding-xs"><a href="/about.html">About</a></li>
+                    <li class="padding-xs"><a href="/index.html" class="nav-link">Listings</a></li>
+                    <li class="padding-xs"><a href="/about.html" class="nav-link">About</a></li>
                     <li class="padding-xs color-black">Login/out</li>
                 </ul>
                 <i class="fa fa-bars padding-xs color-black" id="mobile-menu-btn" aria-label="opens navigation menu"></i>
@@ -36,8 +36,20 @@
         <div class="flex flex-column">
             <div class="content-and-sidebar">
                 <div class="bg-white border-t-dashed-grey-contrast-slight">
-                    <ul>
-                        <li>Sort</li>
+                    <ul class="flex flex-wrap">
+                        <div class="flex padding-xs border-radius-sm">
+                            <li>
+                                My account
+                                <i class="fa-solid fa-user"></i>
+                            </li>
+                        </div>
+                        
+                        <li class="padding-xs border-radius-sm">My listings</li>
+                        <div class="flex padding-xs border-radius-sm">
+                            <li>Close
+                                <i class="fa-solid fa-x"></i>
+                            </li>
+                        </div>
                     </ul>
                 </div>
                 <div class="listings-wrap">

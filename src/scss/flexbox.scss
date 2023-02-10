@@ -37,12 +37,13 @@
 }
 
 .content-and-sidebar > *:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
     flex: 1 1 10%;
     flex-grow: 1;
 }
 
 .content-and-sidebar > *:nth-child(2) {
-    min-width: 90%;
     flex: 1 1 90%;
     flex-grow: 2;
 }

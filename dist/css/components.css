@@ -1,8 +1,13 @@
-.topnav li:hover {
+footer {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.navlink :hover {
   text-decoration: underline;
 }
 
-.topnav a.active {
+.navlink a.active {
   text-decoration: underline;
 }
 
