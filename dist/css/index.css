@@ -463,7 +463,6 @@ a {
 }
 
 .content-and-sidebar > *:nth-child(1) {
-  display: flex;
   flex-wrap: wrap;
   flex: 1 1 10%;
   flex-grow: 1;
@@ -485,6 +484,10 @@ footer {
 
 .navlink a.active {
   text-decoration: underline;
+}
+
+.card-wrap {
+  max-width: 1200px;
 }
 
 body {

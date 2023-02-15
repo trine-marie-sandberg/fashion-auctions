@@ -11,4 +11,8 @@ footer {
   text-decoration: underline;
 }
 
+.card-wrap {
+  max-width: 1200px;
+}
+
 /*# sourceMappingURL=components.css.map */
