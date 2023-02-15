@@ -20,6 +20,7 @@ loginOutBtn.addEventListener("click", () => {
         loginOutBtn.innerText = "Login";
     }
     else {
-        document.location.replace("../auth/profile/login");
+        const originUrl = window.location.origin;
+        document.location.replace(originUrl + "/auth/profile/login");
     }
 });
