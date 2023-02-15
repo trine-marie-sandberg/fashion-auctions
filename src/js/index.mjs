@@ -4,14 +4,22 @@ import * as local from "./storage/localstorage.mjs";
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 mobileMenuBtn.addEventListener("click", mobileMenu);
 
+const token = local.storageLoad("accessoken");
 const loginOutBtn = document.querySelector(".login-out-btn");
+if(token) {
+    loginOutBtn.innerText = "Logout";
+} else {
+    loginOutBtn.innerText = "Login";
+};
+
 loginOutBtn.addEventListener("click", () => {
-    const token = local.storageLoad("accessToken");
-    if(token === null) {
-        console.log(token)
-        //document.location.href = "/profile/login";
+    
+    if(token) {
+
+        //Logout function here
+        loginOutBtn.innerText = "Login";
     }
     else {
-        console.log(token)
+        document.location.replace("/auth/profile/login");
     }
 });

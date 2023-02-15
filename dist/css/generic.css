@@ -13,7 +13,7 @@ h1, h2, h3 {
   font-style: normal;
 }
 
-p {
+p, li, button {
   font-family: "etna", sans-serif;
   font-weight: 300;
   font-style: normal;

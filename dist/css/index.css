@@ -363,9 +363,11 @@ a {
   .responsive-test {
     background-color: purple;
   }
-  header {
-    padding: 10px;
+  header, .login-out-btn {
     font-size: 1.5rem;
+  }
+  header {
+    padding: 0 10px;
   }
   .listings-wrap {
     margin: 10px;
@@ -410,8 +412,7 @@ a {
   .responsive-test {
     background-color: #2A2525;
   }
-  header {
-    padding: 0 10px;
+  header, .login-out-btn {
     font-size: 1.5rem;
   }
   .listings-wrap {
@@ -501,7 +502,7 @@ h1, h2, h3 {
   font-style: normal;
 }
 
-p {
+p, li, button {
   font-family: "etna", sans-serif;
   font-weight: 300;
   font-style: normal;
