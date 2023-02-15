@@ -386,6 +386,11 @@ a {
   .search {
     width: 20vw;
   }
+  .auth-background {
+    background-image: url(/src/assets/img/login-img-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 @media (min-width: 480px) {
   .responsive-test {
@@ -398,6 +403,11 @@ a {
   }
   #mobile-menu-btn {
     display: none;
+  }
+  .auth-background {
+    background-image: url(/src/assets/img/login-img-crop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @media (min-width: 960px) {
@@ -417,6 +427,11 @@ a {
   }
   .listings-wrap {
     margin: 2rem;
+  }
+  .auth-background {
+    background-image: url(/src/assets/img/login-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 @media (max-width: 720px) {

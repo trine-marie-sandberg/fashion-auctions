@@ -40,6 +40,11 @@ $breakpoints: (
     .search {
         width: 20vw;
     }
+    .auth-background {
+        background-image: url(/src/assets/img/login-img-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 }
 
 @include breakpoint(map-get($breakpoints, "sm")) {
@@ -55,6 +60,11 @@ $breakpoints: (
     #mobile-menu-btn {
         display: none;
     }
+    .auth-background {
+        background-image: url(/src/assets/img/login-img-crop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 }
 
 @include breakpoint(map-get($breakpoints, "lg")) {
@@ -76,6 +86,11 @@ $breakpoints: (
     .listings-wrap {
         margin: map-get($sizes, "lg");
     }
+    .auth-background {
+        background-image: url(/src/assets/img/login-img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
 }
 
 // max-width
