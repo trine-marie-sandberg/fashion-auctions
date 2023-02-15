@@ -1,6 +1,6 @@
 import { mobileMenu } from "./menu-items/mobile-menu.js";
 import * as local from "./storage/localstorage.mjs";
-
+const reuwt = "fashion-auctions"
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 mobileMenuBtn.addEventListener("click", mobileMenu);
 
@@ -22,6 +22,6 @@ loginOutBtn.addEventListener("click", () => {
     else {
         //const originUrl = window.location.origin;
         //document.location.replace(originUrl + "/auth/profile/login");
-        window.location.href = "/auth/profile/login/";
+        window.location.href = reuwt + "/auth/profile/login/";
     }
 });
