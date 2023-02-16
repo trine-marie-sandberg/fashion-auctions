@@ -391,10 +391,18 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .login-form-bg {
+    padding: 1rem;
+    margin: 20vw 10px;
+  }
 }
 @media (min-width: 480px) {
   .responsive-test {
     background-color: #395658;
+  }
+  .login-form-bg {
+    padding: 2rem;
+    margin: 15vw 20vw;
   }
 }
 @media (min-width: 720px) {
@@ -417,6 +425,10 @@ a {
   .content-and-sidebar {
     flex-wrap: nowrap;
   }
+  .login-form-bg {
+    padding: 4rem;
+    margin: 5vw 20vw;
+  }
 }
 @media (min-width: 1200px) {
   .responsive-test {
@@ -432,6 +444,10 @@ a {
     background-image: url(/../src/assets/img/login-img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .login-form-bg {
+    padding: 4rem;
+    margin: 5vw 25vw;
   }
 }
 @media (max-width: 720px) {
@@ -543,8 +559,16 @@ p, li, button {
   height: fit-content;
 }
 
+.fit-content-w {
+  width: fit-content;
+}
+
 li {
   list-style-type: none;
+}
+
+.transparent-white {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -36,8 +36,16 @@ p, li, button {
   height: fit-content;
 }
 
+.fit-content-w {
+  width: fit-content;
+}
+
 li {
   list-style-type: none;
+}
+
+.transparent-white {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /*# sourceMappingURL=generic.css.map */

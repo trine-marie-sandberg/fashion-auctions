@@ -45,11 +45,19 @@ $breakpoints: (
         background-repeat: no-repeat;
         background-size: cover;
       }
+    .login-form-bg {
+        padding: map-get($sizes, "sm");
+        margin: 20vw 10px;
+    }
 }
-
+//Breakpoint sm
 @include breakpoint(map-get($breakpoints, "sm")) {
     .responsive-test {
         background-color: map-get($colours, "primary");
+    }
+    .login-form-bg {
+        padding: map-get($sizes, "lg");
+        margin: 15vw 20vw;
     }
 }
 
@@ -66,7 +74,7 @@ $breakpoints: (
         background-size: cover;
       }
 }
-
+//breakpoint lg
 @include breakpoint(map-get($breakpoints, "lg")) {
     .responsive-test {
         background-color: map-get($colours, "grey-contrast-light");
@@ -74,8 +82,12 @@ $breakpoints: (
     .content-and-sidebar {
         flex-wrap: nowrap;
     }
+    .login-form-bg {
+        padding: map-get($sizes, "xl");
+        margin: 5vw 20vw;
+    }
 }
-
+//breakpoint xl
 @include breakpoint(map-get($breakpoints, "xl")) {
     .responsive-test {
         background-color: map-get($colours, "black");
@@ -91,6 +103,10 @@ $breakpoints: (
         background-repeat: no-repeat;
         background-size: cover;
       }
+      .login-form-bg {
+        padding: map-get($sizes, "xl");
+        margin: 5vw 25vw;
+    }
 }
 
 // max-width
