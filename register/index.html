@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Auction listings</title>
+    <link rel="stylesheet" href="../src/assets/fontawsome/css/all.css">
+    <link rel="stylesheet" href="https://use.typekit.net/moa7llh.css">
+    <link rel="stylesheet" href="../dist/css/index.css">
+    <script defer src="../src/js/index.mjs" type="module"></script>
+    <script type="module" src="../src/js/form-functions/index.mjs"></script>
+</head>
+<body class="bg-grey-bg flex flex-column auth-background">
+    <header class="flex flex-between flex-center-h bg-white color-black">
+        <div class="flex flex-center-h">
+            <img src="../src/assets/img/logo.png" class="logo">
+            <nav class="nav flex flex-center-v">
+                <ul class="topnav flex" id="topnav">
+                    <li class="padding-xs"><a href="../index.html" class="nav-link">Listings</a></li>
+                    <li class="padding-xs"><a href="../about.html" class="nav-link">About</a></li>
+                    <li>
+                        <button class="border-white bg-white login-out-btn color-black padding-xs">Login</button>
+                    </li>
+                </ul>
+                <i class="fa fa-bars padding-xs color-black" id="mobile-menu-btn" aria-label="opens navigation menu"></i>
+            </nav>
+        </div>
+        <div class="flex flex-between">
+            <div class="flex flex-center-v">
+                <i class="fa-solid fa-magnifying-glass padding-xs"></i>
+                <input type="text" class="search half-size-h border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs">
+            </div>
+            <i class="fa-brands fa-instagram padding-xs"></i>
+        </div>
+    </header>
+    <main>
+        <div class="bg-white border-radius-sm transparent-white fit-content-w login-form-bg">
+            <h1>Register your free account</h1>
+            <form>
+                <div class="margin-xs flex flex-column">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                </div>
+                <div class="margin-xs flex flex-column">
+                    <label for="user-name">User name:</label>
+                    <input type="text" id="user-name" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                </div>
+                <div class="margin-xs flex flex-column">
+                    <label for="password">Password:</label>
+                    <input type="text" id="password" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                </div>
+                <button type="submit" class="btn bg-primary border-grey-contrast-slight color-white margin-xs">Submit</button>
+            </form>
+            <div class="margin-xs padding-top-btm-sm">
+                <h2>Already registered?</h2>
+                <a href="../login/" class="btn bg-secondary border-grey-contrast-slight color-black">Login</a>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-white">
+        <p>© 2023, rights reserved</p>
+    </footer>
+</body>
+</html>

@@ -20,7 +20,7 @@ loginOutBtn.addEventListener("click", () => {
     }
     else {
         
-        if(window.location.href.includes("/login/")) {
+        if((window.location.href.includes("/login/")) || (window.location.href.includes("/register/"))) {
             //
         }
         else {
