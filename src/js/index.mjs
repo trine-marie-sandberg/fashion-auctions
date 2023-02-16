@@ -20,6 +20,6 @@ loginOutBtn.addEventListener("click", () => {
     }
     else {
         //window.location.href = "./auth/profile/login/";
-        window.location.href = "./profile/login/";
+        window.location.href = "./login/";
     }
 });
