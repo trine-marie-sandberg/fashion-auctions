@@ -363,6 +363,9 @@ a {
   .responsive-test {
     background-color: purple;
   }
+  h1, h2, h3 {
+    font-size: 1.2rem;
+  }
   header, .login-out-btn {
     font-size: 1.5rem;
   }
@@ -387,13 +390,13 @@ a {
     width: 20vw;
   }
   .auth-background {
-    background-image: url(/../src/assets/img/login-img-mobile.jpg);
+    background-image: url(../src/assets/img/login-img-xs.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   .login-form-bg {
     padding: 1rem;
-    margin: 20vw 10px;
+    margin: 10px;
   }
 }
 @media (min-width: 480px) {
@@ -402,32 +405,39 @@ a {
   }
   .login-form-bg {
     padding: 2rem;
-    margin: 15vw 20vw;
+    margin: 10vw;
+  }
+  .auth-background {
+    background-image: url(../src/assets/img/login-img-mobile.jpg);
   }
 }
 @media (min-width: 720px) {
   .responsive-test {
     background-color: #FBE8BC;
   }
+  h1, h2, h3 {
+    font-size: 1.5rem;
+  }
   #mobile-menu-btn {
     display: none;
   }
   .auth-background {
-    background-image: url(/../src/assets/img/login-img-crop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../src/assets/img/login-img-crop.jpg);
   }
 }
-@media (min-width: 960px) {
+@media (min-width: 1050px) {
   .responsive-test {
     background-color: #A89E9E;
   }
   .content-and-sidebar {
     flex-wrap: nowrap;
   }
+  .auth-background {
+    background-image: url(https://www.dropbox.com/s/j2hu8sl0vesugyl/login-img.jpg?raw=1);
+  }
   .login-form-bg {
     padding: 4rem;
-    margin: 5vw 20vw;
+    margin: 5vw 10vw;
   }
 }
 @media (min-width: 1200px) {
@@ -439,15 +449,6 @@ a {
   }
   .listings-wrap {
     margin: 2rem;
-  }
-  .auth-background {
-    background-image: url(https://www.dropbox.com/s/j2hu8sl0vesugyl/login-img.jpg?raw=1);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .login-form-bg {
-    padding: 4rem;
-    margin: 5vw 25vw;
   }
 }
 @media (max-width: 720px) {

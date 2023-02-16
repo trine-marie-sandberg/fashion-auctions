@@ -2,7 +2,7 @@ $breakpoints: (
     "xs": 0,
     "sm": 480px,
     "med": 720px,
-    "lg": 960px,
+    "lg": 1050px,
     "xl": 1200px,
 );
 
@@ -16,6 +16,9 @@ $breakpoints: (
 @include breakpoint {
     .responsive-test {
         background-color: purple;
+    }
+    h1, h2, h3 {
+        font-size: 1.2rem;
     }
     header, .login-out-btn {
         font-size: map-get($sizes, "med");
@@ -41,13 +44,13 @@ $breakpoints: (
         width: 20vw;
     }
     .auth-background {
-        background-image: url(/../src/assets/img/login-img-mobile.jpg);
+        background-image: url(../src/assets/img/login-img-xs.jpg);
         background-repeat: no-repeat;
         background-size: cover;
       }
     .login-form-bg {
         padding: map-get($sizes, "sm");
-        margin: 20vw 10px;
+        margin: 10px;
     }
 }
 //Breakpoint sm
@@ -57,21 +60,25 @@ $breakpoints: (
     }
     .login-form-bg {
         padding: map-get($sizes, "lg");
-        margin: 15vw 20vw;
+        margin: 10vw;
     }
+    .auth-background {
+        background-image: url(../src/assets/img/login-img-mobile.jpg);
+      }
 }
-
+//breakpoint med
 @include breakpoint(map-get($breakpoints, "med")) {
     .responsive-test {
         background-color: map-get($colours, "secondary");
+    }
+    h1, h2, h3 {
+        font-size: 1.5rem;
     }
     #mobile-menu-btn {
         display: none;
     }
     .auth-background {
-        background-image: url(/../src/assets/img/login-img-crop.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-image: url(../src/assets/img/login-img-crop.jpg);
       }
 }
 //breakpoint lg
@@ -82,9 +89,12 @@ $breakpoints: (
     .content-and-sidebar {
         flex-wrap: nowrap;
     }
+    .auth-background {
+        background-image: url(https://www.dropbox.com/s/j2hu8sl0vesugyl/login-img.jpg?raw=1);
+      }
     .login-form-bg {
         padding: map-get($sizes, "xl");
-        margin: 5vw 20vw;
+        margin: 5vw 10vw;
     }
 }
 //breakpoint xl
@@ -97,15 +107,6 @@ $breakpoints: (
     }
     .listings-wrap {
         margin: map-get($sizes, "lg");
-    }
-    .auth-background {
-        background-image: url(https://www.dropbox.com/s/j2hu8sl0vesugyl/login-img.jpg?raw=1);
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-      .login-form-bg {
-        padding: map-get($sizes, "xl");
-        margin: 5vw 25vw;
     }
 }
 
