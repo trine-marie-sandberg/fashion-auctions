@@ -19,7 +19,13 @@ loginOutBtn.addEventListener("click", () => {
         loginOutBtn.innerText = "Login";
     }
     else {
-        //window.location.href = "./auth/profile/login/";
-        window.location.href = "./login/";
+        
+        if(window.location.href.includes("/login/")) {
+            //
+        }
+        else {
+            window.location.href = "./login/";
+        }
+        loginOutBtn.style.textDecoration = "underline";
     }
 });

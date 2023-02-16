@@ -18,7 +18,7 @@ $breakpoints: (
         background-color: purple;
     }
     h1, h2, h3 {
-        font-size: 1.2rem;
+        margin-bottom: map-get($sizes, "med");
     }
     header, .login-out-btn {
         font-size: map-get($sizes, "med");
@@ -72,7 +72,7 @@ $breakpoints: (
         background-color: map-get($colours, "secondary");
     }
     h1, h2, h3 {
-        font-size: 1.5rem;
+        margin-bottom: map-get($sizes, "lg");
     }
     #mobile-menu-btn {
         display: none;
@@ -114,5 +114,8 @@ $breakpoints: (
 @media (max-width: map-get($breakpoints, "med")) {
     .topnav {
         display: none !important;
+    }
+    .card {
+        flex-wrap: wrap;
     }
 }
