@@ -41,7 +41,7 @@ $breakpoints: (
         width: 20vw;
     }
     .auth-background {
-        background-image: url(../src/assets/img/login-img-mobile.jpg);
+        background-image: url(/../src/assets/img/login-img-mobile.jpg);
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -69,7 +69,7 @@ $breakpoints: (
         display: none;
     }
     .auth-background {
-        background-image: url(../src/assets/img/login-img-crop.jpg);
+        background-image: url(/../src/assets/img/login-img-crop.jpg);
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -99,7 +99,7 @@ $breakpoints: (
         margin: map-get($sizes, "lg");
     }
     .auth-background {
-        background-image: url(../src/assets/img/login-img.jpg);
+        background-image: url(https://www.dropbox.com/s/j2hu8sl0vesugyl/login-img.jpg?raw=1);
         background-repeat: no-repeat;
         background-size: cover;
       }

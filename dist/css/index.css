@@ -387,7 +387,7 @@ a {
     width: 20vw;
   }
   .auth-background {
-    background-image: url(../src/assets/img/login-img-mobile.jpg);
+    background-image: url(/../src/assets/img/login-img-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -413,7 +413,7 @@ a {
     display: none;
   }
   .auth-background {
-    background-image: url(../src/assets/img/login-img-crop.jpg);
+    background-image: url(/../src/assets/img/login-img-crop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -441,7 +441,7 @@ a {
     margin: 2rem;
   }
   .auth-background {
-    background-image: url(../src/assets/img/login-img.jpg);
+    background-image: url(https://www.dropbox.com/s/j2hu8sl0vesugyl/login-img.jpg?raw=1);
     background-repeat: no-repeat;
     background-size: cover;
   }
