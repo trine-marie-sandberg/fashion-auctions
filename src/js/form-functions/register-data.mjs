@@ -1,14 +1,13 @@
 //Returns registerUser from form
-export function regiserData(event) {
-
+export function regiserData(form, event) {
+    
     event.preventDefault();
 
-    const registerUser = {
-        name: this.userName.value,
-        email: this.email.value,
-        password: this.password.value,
-        avatar: this.avatar.value,
+    const userData = {
+        name: form.username.value,
+        email: form.email.value,
+        password: form.password.value,
     };
-
-    return registerUser;
+    console.log(userData)
+    return userData;
 };

@@ -1,14 +1,11 @@
-export async function loginData(event) {
+export async function loginData(form, event) {
     
     event.preventDefault();
 
-    const email = document.querySelector("#email");
-    const password = document.querySelector("#password");
-
-    const loginUser = {
-        email: email.value,
-        password: password.value,
+    const userData = {
+        email: form.email.value,
+        password: form.value,
     };
-
-    return loginUser;
+    console.log(userData)
+    return userData;
 };

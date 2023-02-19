@@ -37,14 +37,14 @@
     <main>
         <div class="bg-white border-radius-sm transparent-white fit-content-w login-form-bg">
             <h1>Log in to use our auction services</h1>
-            <form>
+            <form id="login-form">
                 <div class="margin-xs flex flex-column">
-                    <label for="user-name">User name:</label>
-                    <input type="text" id="user-name" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
                 </div>
                 <div class="margin-xs flex flex-column">
                     <label for="password">Password:</label>
-                    <input type="text" id="password" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                    <input type="password" id="password" name="password" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
                 </div>
                 <button type="submit" class="btn bg-primary border-grey-contrast-slight color-white margin-xs">Login</button>
             </form>

@@ -37,18 +37,18 @@
     <main>
         <div class="bg-white border-radius-sm transparent-white fit-content-w login-form-bg">
             <h1>Register your free account</h1>
-            <form>
+            <form id="register-form">
                 <div class="margin-xs flex flex-column">
                     <label for="email">Email:</label>
-                    <input type="text" id="email" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                    <input type="text" id="email" name="email" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
                 </div>
                 <div class="margin-xs flex flex-column">
                     <label for="user-name">User name:</label>
-                    <input type="text" id="user-name" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                    <input type="text" id="user-name" name="username" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
                 </div>
                 <div class="margin-xs flex flex-column">
                     <label for="password">Password:</label>
-                    <input type="text" id="password" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                    <input type="password" id="password" name="password" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
                 </div>
                 <button type="submit" class="btn bg-primary border-grey-contrast-slight color-white margin-xs">Submit</button>
             </form>
