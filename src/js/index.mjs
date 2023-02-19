@@ -13,3 +13,13 @@ loginOutBtn.addEventListener("click", () => {
     logInOutHandler(loginOutBtn, token);   
 });
 loginOutStyles(loginOutBtn, token);
+
+function accountMenu(token) {
+    const menu = document.getElementById("account-menu");
+    if(!token) {
+        menu.style.display = "none";
+    }
+    
+    console.log(menu)
+};
+accountMenu(token);
