@@ -1,4 +1,4 @@
-import { formHandler } from "./form-handler.mjs";
+import { formHandler } from "./login-out.mjs";
 
 const loader = "";
 const loginEndpoint = "https://nf-api.onrender.com/api/v1/auction/auth/login"

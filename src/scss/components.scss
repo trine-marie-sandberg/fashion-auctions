@@ -6,8 +6,11 @@
 .login-out-btn {
   cursor: pointer;
 }
+.login-out-btn:hover {
+  text-decoration: underline;
+}
 
-.navlink :hover {
+.nav-link:hover {
   text-decoration: underline;
 }
 
