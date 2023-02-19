@@ -1,11 +1,11 @@
-export async function loginData(form, event) {
+export function loginData(form, event) {
     
     event.preventDefault();
 
     const userData = {
         email: form.email.value,
-        password: form.value,
+        password: form.password.value,
     };
-    console.log(userData)
+
     return userData;
 };

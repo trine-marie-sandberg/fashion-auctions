@@ -1,16 +1,6 @@
-import { loginData } from "./login-data.mjs";
-import { regiserData } from "./register-data.mjs";
+import { formHandler } from "./form-handler.mjs";
 
-const registerForm = document.getElementById("register-form");
-if(registerForm) {
-    registerForm.addEventListener("submit", (event) => {
-        regiserData(registerForm, event);
-    });
-};
-
-const loginForm = document.getElementById("login-form");
-if(loginForm) {
-    loginForm.addEventListener("submit", (event) => {
-        loginData(loginForm, event);
-    });
-};
+const loader = "";
+const loginEndpoint = "https://nf-api.onrender.com/api/v1/auction/auth/login"
+const registerEndpoint = "https://nf-api.onrender.com/api/v1/auction/auth/register"
+formHandler(loginEndpoint, registerEndpoint);

@@ -1,6 +1,6 @@
 //Returns registerUser from form
 export function regiserData(form, event) {
-    
+
     event.preventDefault();
 
     const userData = {
@@ -8,6 +8,6 @@ export function regiserData(form, event) {
         email: form.email.value,
         password: form.password.value,
     };
-    console.log(userData)
+
     return userData;
 };
