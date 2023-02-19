@@ -40,15 +40,15 @@
             <form id="register-form">
                 <div class="margin-xs flex flex-column">
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                    <input type="email" id="email" name="email" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @noroff.no domains are alowed to register." required>
                 </div>
                 <div class="margin-xs flex flex-column">
                     <label for="user-name">User name:</label>
-                    <input type="text" id="user-name" name="username" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                    <input type="text" id="user-name" name="username" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" pattern="^[\w]+$" title="Username may only contain lowercase, uppercase, numbers and underscore. Example: My_user3" required>
                 </div>
                 <div class="margin-xs flex flex-column">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs">
+                    <input type="password" id="password" name="password" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" minlength="8" title="password must be valid. Minimum 8 characters">
                 </div>
                 <button type="submit" class="btn bg-primary border-grey-contrast-slight color-white margin-xs">Submit</button>
             </form>
