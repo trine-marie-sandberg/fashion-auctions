@@ -513,6 +513,10 @@ footer {
   margin-bottom: 10px;
 }
 
+.login-out-btn {
+  cursor: pointer;
+}
+
 .navlink :hover {
   text-decoration: underline;
 }

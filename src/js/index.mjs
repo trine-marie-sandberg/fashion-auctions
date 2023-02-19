@@ -3,7 +3,7 @@ import * as local from "./storage/localstorage.mjs";
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 mobileMenuBtn.addEventListener("click", mobileMenu);
 
-const token = local.storageLoad("accessoken");
+const token = local.storageLoad("accessToken");
 const loginOutBtn = document.querySelector(".login-out-btn");
 if(token) {
     loginOutBtn.innerText = "Logout";
@@ -14,9 +14,16 @@ if(token) {
 loginOutBtn.addEventListener("click", () => {
     
     if(token) {
+        console.log(token)
+        function logout() {
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("user");
+            localStorage.removeItem("profile");
 
-        //Logout function here
-        loginOutBtn.innerText = "Login";
+            window.location.reload();
+        };
+        logout();
+        loginOutBtn.innerText = "Logout";
     }
     else {
         
