@@ -1,6 +1,12 @@
 import { mobileMenu } from "./menu-items/mobile-menu.js";
 import * as local from "./storage/localstorage.mjs";
 import { logInOutHandler, loginOutStyles } from "./menu-items/login-logout.mjs";
+import { listingsHandler } from "./listings/index.mjs";
+
+const listingsContainer = document.getElementById("listings-container");
+if(listingsContainer) {
+    listingsHandler();
+};
 
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 mobileMenuBtn.addEventListener("click", mobileMenu);
@@ -20,6 +26,5 @@ function accountMenu(token) {
         menu.style.display = "none";
     }
     
-    console.log(menu)
 };
 accountMenu(token);
