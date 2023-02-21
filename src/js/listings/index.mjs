@@ -5,7 +5,7 @@ import * as endpoint from "../api-endpoints.mjs";
 export async function listingsHandler() {
     try {
         const listingsArray = await getListings(endpoint.api + endpoint.listings + endpoint.sortDesc);
-        displayPost(listingsArray);
+        //displayPost(listingsArray);
         const container = document.getElementById("listings-container");
         container.append(...listingsArray.map(displayPost));
 

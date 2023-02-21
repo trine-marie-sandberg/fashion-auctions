@@ -1,14 +1,9 @@
 export function displayPost(listing) {
-    console.log(listing)
+    //console.log(listing)
     const cardWrap = document.createElement("div");
     const cardWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "padding-top-btm-med"];
     cardWrap.classList.add(...cardWrapClasses);
     let media = [listing.media];
-    //console.log(cardWrap.media)
-    //let seller = JSON.stringify(listing.seller);
-    let seller = listing.seller;
-    console.log(seller)
-    
 
     if(media.length === 0) {
         media = ["./src/assets/img/placeholder-img.jpg"];
@@ -23,7 +18,7 @@ export function displayPost(listing) {
                             <h2 class="listing-name">${listing.title}</h2>
                             <p>Created: ${listing.created}</p>
                             <p>Auction ends: ${listing.endsAt}</p>
-                            <h3>Seller: ${seller}</h3>
+                            <h3>Seller: ${listing.seller.name}</h3>
                             <p>Description: ${listing.description}</p>
                             </div>
                             <div>
