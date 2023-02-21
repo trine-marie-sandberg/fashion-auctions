@@ -3,3 +3,4 @@ export const auth = "auth/";
 export const login = "login";
 export const register = "register";
 export const listings = "listings/";
+export const sortDesc = "?_seller=true&_bids=true&sort=created&sortOrder=desc";
