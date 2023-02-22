@@ -12,8 +12,8 @@ export function displayPost(listing) {
     }
 
     const id = listing.id;
-
-    cardWrap.innerHTML = `<a href="../product-details/?id=${id}" class="card even-columns bg-white padding-sm">
+    const href = "./product-details/?id=" + id;
+    cardWrap.innerHTML = `<a class="card even-columns bg-white padding-sm">
                             <div class="listing-info-wrap padding-left-right-sm">
                             <h2 class="listing-name">${listing.title}</h2>
                             <p>Created: ${listing.created}</p>
@@ -29,6 +29,7 @@ export function displayPost(listing) {
   
     //cardWrap.querySelector("img").src = listing.media;
     //cardWrap.querySelector("span").innerText = listing.body;
+    cardWrap.querySelector("a").href = href;
     
     return cardWrap
   }
