@@ -4,9 +4,7 @@ import { logInOutHandler, loginOutStyles } from "./menu-items/login-logout.mjs";
 import { listingsHandler } from "./listings/index.mjs";
 
 const listingsContainer = document.getElementById("listings-container");
-if(listingsContainer) {
-    listingsHandler();
-};
+listingsHandler(listingsContainer);
 
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 mobileMenuBtn.addEventListener("click", mobileMenu);

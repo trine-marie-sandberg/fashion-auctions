@@ -1,27 +1,13 @@
-export async function getListings(url) {
+export async function getListings(url, fetchOptions) {
 
     try {
-        // if (!localStorage.getItem("accessToken")) {
-
-        //     console.log("Warning: accessToken not found");
-        // } else {};
-
-            const fetchOptions = {
-
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    //Authorization: `Bearer ${userToken}`,
-                },
-            };
-
+        
             const response = await fetch(url, fetchOptions);
-
             const json = await response.json();
-            const postArray = json;
-            return postArray;
-
+            const data = json;
+            return data;
     } catch (error) {
+
         console.log(error);
     };
 };

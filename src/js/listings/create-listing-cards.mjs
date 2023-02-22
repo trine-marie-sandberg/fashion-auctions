@@ -11,9 +11,9 @@ export function displayPost(listing) {
         media = media[0];
     }
 
-    cardWrap.id = listing.id;
+    const id = listing.id;
 
-    cardWrap.innerHTML = `<a href="#" class="card even-columns bg-white padding-sm">
+    cardWrap.innerHTML = `<a href="/product-details/?id=${id}" class="card even-columns bg-white padding-sm">
                             <div class="listing-info-wrap padding-left-right-sm">
                             <h2 class="listing-name">${listing.title}</h2>
                             <p>Created: ${listing.created}</p>
