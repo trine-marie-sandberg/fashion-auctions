@@ -22,12 +22,12 @@ export function displayPost(listing) {
                             <p>Description: ${listing.description}</p>
                             </div>
                             <div>
-                              <img src="${media}" class="listing-img img-auto border-grey-contrast-slight border-radius-sm auto-img" alt="${listing.title}"  onerror="this.onerror=null; this.src='./src/assets/img/placeholder-img.jpg';">
+                              <img src="" class="listing-img img-auto border-grey-contrast-slight border-radius-sm auto-img" alt="${listing.title}"  onerror="this.onerror=null; this.src='./src/assets/img/placeholder-img.jpg';">
                               <p>Last updated: ${listing.updated}</p>
                             </div>
                           </a>`;
   
-    //cardWrap.querySelector("img").src = listing.media;
+    cardWrap.querySelector("img").src = media;
     //cardWrap.querySelector("span").innerText = listing.body;
     cardWrap.querySelector("a").href = href;
     
