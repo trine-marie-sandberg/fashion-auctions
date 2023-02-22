@@ -20,7 +20,8 @@ export async function listingsHandler(listingsContainer) {
             const param = new URLSearchParams(queryString);
             const id = param.get("id")
             console.log("hi")
-            const productObject = await getListings(endpoint.api + endpoint.listings + id);
+            console.log(endpoint.api + endpoint.listings + id)
+            const productObject = await getListings(endpoint.api + endpoint.listings + id + endpoint.options);
             console.log(productObject)
         };
 
