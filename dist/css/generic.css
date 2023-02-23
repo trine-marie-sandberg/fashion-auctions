@@ -28,6 +28,10 @@ p, li, button {
   margin: 0 auto;
 }
 
+.max-width-500 {
+  max-width: 500px;
+}
+
 .half-size-h {
   height: 50%;
 }

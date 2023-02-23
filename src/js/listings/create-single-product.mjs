@@ -10,7 +10,7 @@ export function displayProduct(product) {
                                   <div>
                                       <h1>${product.title}</h1>
                                       <h2>Product description</h2>
-                                      <p>${product.description}</p>
+                                      <p class="max-width-500">${product.description}</p>
                                   </div>
                                   <div class="border-radius-xs bg-white padding-sm border-xl fit-content-h">
                                       <div class="flex flex-wrap padding-xs">
