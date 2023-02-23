@@ -1,5 +1,14 @@
 export function displayProduct(product) {
 
+    let bidArray = [];
+    const bids = product.bids;
+    for (let i = 0; i < bids.length; i++) {
+        const bid = bids[i].amount;
+        bidArray.push(bid);
+    };
+    const highestBid = Math.max(...bidArray);
+    console.log(highestBid)
+
     console.log(product);
     const productWrap = document.createElement("div");
     const productWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "margin-med"];
@@ -19,7 +28,7 @@ export function displayProduct(product) {
                                               <img src="${product.seller.avatar}" class="avatar margin-left-right-xs">
                                           </div>
                                       </div>
-                                      <p>Current bid: ${product.bids}</p>
+                                      <p>Current highest bid: $ ${highestBid}</p>
                                       <button class="btn bg-primary color-white border-grey-contrast-dark">Make a bid</button>
                                   </div> 
                                 </div>
