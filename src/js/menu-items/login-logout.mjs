@@ -16,6 +16,8 @@ export function logInOutHandler(btn, token) {
         
         if((window.location.href.includes("/login/")) || (window.location.href.includes("/register/"))) {
             window.location.reload();
+        } else if(window.location.href.includes("/product-details/")) {
+            window.location.href = "../login/";
         }
         else {
             window.location.href = "./login/";

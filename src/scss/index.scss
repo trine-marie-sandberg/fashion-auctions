@@ -50,6 +50,9 @@ $sizes: (
     .margin-#{$key} {
         margin: $val;
     }
+    .margin-left-right-#{$key} {
+        margin: 0 $val;
+    }
     .padding-#{$key} {
         padding: $val;
     }

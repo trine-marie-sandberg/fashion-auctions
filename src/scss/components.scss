@@ -2,7 +2,14 @@
     margin-top: auto;
     margin-bottom: 10px;
 }
-
+.avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  padding: 1px;
+  background-color: map-get($colours, "grey-contrast-light");
+  border: solid 1px map-get($colours, "white");
+}
 .login-out-btn {
   cursor: pointer;
 }

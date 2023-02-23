@@ -1,5 +1,6 @@
 import { getListings } from "./get-listings.mjs";
 import { displayPost } from "./create-listing-cards.mjs";
+import { displayProduct } from "./create-single-product.mjs";
 import * as endpoint from "../api-endpoints.mjs";
 import * as options from "../headers/index.mjs";
 
@@ -9,8 +10,6 @@ export async function listingsHandler(listingsContainer) {
         if(listingsContainer) {
 
             const listingsArray = await getListings(endpoint.api + endpoint.listings + endpoint.sortDesc, options.allListings);
-            //displayPost(listingsArray);
-            //const container = document.getElementById("listings-container");
             listingsContainer.append(...listingsArray.map(displayPost));
         };
 
@@ -19,10 +18,10 @@ export async function listingsHandler(listingsContainer) {
             const queryString = document.location.search;
             const param = new URLSearchParams(queryString);
             const id = param.get("id")
-            console.log("hi")
-            console.log(endpoint.api + endpoint.listings + id)
+
+            const productContainer = document.querySelector(".product-container");
             const productObject = await getListings(endpoint.api + endpoint.listings + id + endpoint.options);
-            console.log(productObject)
+            productContainer.append(displayProduct(productObject));
         };
 
     } catch(error) {

@@ -263,6 +263,10 @@ a {
   margin: 10px;
 }
 
+.margin-left-right-xs {
+  margin: 0 10px;
+}
+
 .padding-xs {
   padding: 10px;
 }
@@ -281,6 +285,10 @@ a {
 
 .margin-sm {
   margin: 1rem;
+}
+
+.margin-left-right-sm {
+  margin: 0 1rem;
 }
 
 .padding-sm {
@@ -303,6 +311,10 @@ a {
   margin: 1.5rem;
 }
 
+.margin-left-right-med {
+  margin: 0 1.5rem;
+}
+
 .padding-med {
   padding: 1.5rem;
 }
@@ -323,6 +335,10 @@ a {
   margin: 2rem;
 }
 
+.margin-left-right-lg {
+  margin: 0 2rem;
+}
+
 .padding-lg {
   padding: 2rem;
 }
@@ -341,6 +357,10 @@ a {
 
 .margin-xl {
   margin: 4rem;
+}
+
+.margin-left-right-xl {
+  margin: 0 4rem;
 }
 
 .padding-xl {
@@ -511,6 +531,15 @@ a {
 footer {
   margin-top: auto;
   margin-bottom: 10px;
+}
+
+.avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  padding: 1px;
+  background-color: #A89E9E;
+  border: solid 1px #fff;
 }
 
 .login-out-btn {

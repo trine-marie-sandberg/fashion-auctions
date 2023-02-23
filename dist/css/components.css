@@ -1,26 +1,17 @@
-footer {
-  margin-top: auto;
-  margin-bottom: 10px;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 10 |   background-color: map-get($colours, "grey-contrast-light");
+ *    |                             ^^^^^^^^
+ *    '
+ *   src\scss\components.scss 10:29  root stylesheet */
 
-.login-out-btn {
-  cursor: pointer;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined variable.\a    \2577 \a 10 \2502    background-color: map-get($colours, "grey-contrast-light");\d\a    \2502                              ^^^^^^^^\a    \2575 \a   src\\scss\\components.scss 10:29  root stylesheet';
 }
-
-.login-out-btn:hover {
-  text-decoration: underline;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.navlink a.active {
-  text-decoration: underline;
-}
-
-.card-wrap {
-  max-width: 1200px;
-}
-
-/*# sourceMappingURL=components.css.map */
