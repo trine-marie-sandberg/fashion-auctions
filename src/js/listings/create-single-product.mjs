@@ -12,8 +12,8 @@ export function displayProduct(product) {
                                       <h2>Product description</h2>
                                       <p>${product.description}</p>
                                   </div>
-                                  <div class="border-radius-xs bg-white padding-left-right-sm border-xl fit-content-h">
-                                      <div class="flex flex-wrap padding-xs flex-center">
+                                  <div class="border-radius-xs bg-white padding-sm border-xl fit-content-h">
+                                      <div class="flex flex-wrap padding-xs">
                                           <h3>${product.seller.name}</h3>
                                           <div>
                                               <img src="${product.seller.avatar}" class="avatar margin-left-right-xs">
@@ -23,12 +23,14 @@ export function displayProduct(product) {
                                       <button class="btn bg-primary color-white border-grey-contrast-dark">Make a bid</button>
                                   </div> 
                                 </div>
-                                <div class="imgContainer"></div>
+                                <div class="imgContainer margin-top-btm-sm"></div>
                                 <div class="flex flex-between flex-wrap padding-left-right-xs bg-white border-radius-xs">
-                                  <p>Created: ${product.created}</p>
+                                  <div>
+                                     <p>Created: ${product.created}</p>
+                                     <p>Tags: ${product.tags}</p>
+                                  </div>
                                   <p>Auction ends: ${product.endsAt}</p>
                                 </div>
-                                <p class="padding-left-right-xs">Tags: ${product.tags}</p>
                              </div>
                             `;
 

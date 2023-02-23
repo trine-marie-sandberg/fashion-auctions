@@ -27,6 +27,14 @@ $colours: (
         border: 1px solid;
         border-color: $val;
     }
+    .border-btm-#{$key} {
+        border-bottom: 1px solid;
+        border-color: $val;
+    }
+    .border-dashed-btm-#{$key} {
+        border-bottom: 2px dashed;
+        border-color: $val;
+    }
     .border-dashed-#{$key} {
         border: 2px dashed $val;
     }
@@ -52,6 +60,9 @@ $sizes: (
     }
     .margin-left-right-#{$key} {
         margin: 0 $val;
+    }
+    .margin-top-btm-#{$key} {
+        margin: $val 0;
     }
     .padding-#{$key} {
         padding: $val;
