@@ -29,6 +29,7 @@ export function displayProduct(product) {
                                           </div>
                                       </div>
                                       <p>Current highest bid: $ ${highestBid}</p>
+                                      <p>Bids: ${bids.length}</p>
                                       <button class="btn bg-primary color-white border-grey-contrast-dark">Make a bid</button>
                                   </div> 
                                 </div>
