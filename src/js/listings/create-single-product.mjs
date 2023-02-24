@@ -6,8 +6,11 @@ export function displayProduct(product) {
         const bid = bids[i].amount;
         bidArray.push(bid);
     };
-    const highestBid = Math.max(...bidArray);
-    console.log(highestBid)
+    
+    let highestBid = Math.max(...bidArray);
+    if(bidArray.length === 0) {
+        highestBid = 0;
+    };
 
     console.log(product);
     const productWrap = document.createElement("div");

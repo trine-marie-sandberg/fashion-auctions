@@ -638,14 +638,18 @@ a {
   flex-grow: 2;
 }
 
+header {
+  padding: 0 8vw;
+}
+
 footer {
   margin-top: auto;
   margin-bottom: 10px;
 }
 
 .avatar {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 100%;
   padding: 1px;
   background-color: #A89E9E;
