@@ -10,13 +10,23 @@ export function displayPost(listing) {
     } else {
         media = media[0];
     }
+    let bidArray = [];
+    const bids = listing.bids;
+    for (let i = 0; i < bids.length; i++) {
+        const bid = bids[i].amount;
+        bidArray.push(bid);
+    };
+    let highestBid = Math.max(...bidArray);
+    if(bidArray.length === 0) {
+        highestBid = 0;
+    };
 
     const id = listing.id;
     const href = "./product-details/?id=" + id;
     cardWrap.innerHTML = `<a class="card even-columns bg-white padding-xs">
                             <div class="listing-info-wrap padding-left-right-sm">
+                              <p>Start at: $ ${highestBid}</p>
                               <h2 class="listing-name">${listing.title}</h2>
-                              <p>Ends: ${listing.endsAt}</p>
                               <p>Seller: ${listing.seller.name}</p>
                               <p>Description: ${listing.description}</p>
                             </div>
