@@ -545,9 +545,6 @@ a {
   .responsive-test {
     background-color: #FBE8BC;
   }
-  h1, h2, h3 {
-    margin-bottom: 2rem;
-  }
   #mobile-menu-btn {
     display: none;
   }
@@ -616,6 +613,7 @@ a {
 /* Even columns */
 .even-columns {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .even-columns > * {
@@ -674,6 +672,16 @@ footer {
 
 .card-wrap {
   max-width: 1200px;
+  transition: 150ms;
+}
+
+.card-wrap:hover {
+  box-shadow: 3px 3px 10px #A89E9E;
+}
+
+#listings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 body {

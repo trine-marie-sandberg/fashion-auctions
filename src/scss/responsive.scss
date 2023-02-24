@@ -71,9 +71,6 @@ $breakpoints: (
     .responsive-test {
         background-color: map-get($colours, "secondary");
     }
-    h1, h2, h3 {
-        margin-bottom: map-get($sizes, "lg");
-    }
     #mobile-menu-btn {
         display: none;
     }

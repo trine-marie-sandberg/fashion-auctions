@@ -27,4 +27,12 @@ footer {
 }
 .card-wrap {
   max-width: 1200px;
+  transition: 150ms;
+}
+.card-wrap:hover {
+  box-shadow: 3px 3px 10px map-get($colours, "grey-contrast-light");
+}
+#listings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }

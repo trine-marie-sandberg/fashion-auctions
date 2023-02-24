@@ -25,6 +25,7 @@
 /* Even columns */
 .even-columns {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .even-columns > * {
