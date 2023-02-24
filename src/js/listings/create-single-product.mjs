@@ -58,8 +58,6 @@ export function displayProduct(product) {
     } else {
         media.forEach(() => {
             img.src = media;
-            img.onerror = "this.onerror=null";
-            img.onerror = "./src/assets/img/placeholder-img.jpg";
             img.classList.add(...imgClasses);
             imgContainer.append(img);
         });
