@@ -1,55 +1,17 @@
-body {
-  margin: 0;
-  min-height: 100vh;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 4 |     color: map-get($colours, "black");
+ *   |                    ^^^^^^^^
+ *   '
+ *   src\scss\generic.scss 4:20  root stylesheet */
 
-a {
-  text-decoration: none;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Undefined variable.\a   \2577 \a 4 \2502      color: map-get($colours, "black");\d\a   \2502                     ^^^^^^^^\a   \2575 \a   src\\scss\\generic.scss 4:20  root stylesheet';
 }
-
-h1, h2, h3 {
-  font-family: "dejanire-headline", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-p, li, button {
-  font-family: "etna", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.img-auto {
-  height: auto;
-  width: 100%;
-}
-
-.center {
-  margin: 0 auto;
-}
-
-.max-width-500 {
-  max-width: 500px;
-}
-
-.half-size-h {
-  height: 50%;
-}
-
-.fit-content-h {
-  height: fit-content;
-}
-
-.fit-content-w {
-  width: fit-content;
-}
-
-li {
-  list-style-type: none;
-}
-
-.transparent-white {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-/*# sourceMappingURL=generic.css.map */

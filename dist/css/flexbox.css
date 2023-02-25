@@ -26,6 +26,8 @@
 .even-columns {
   display: flex;
   flex-wrap: wrap;
+  height: 95%;
+  margin: 0 auto;
 }
 
 .even-columns > * {

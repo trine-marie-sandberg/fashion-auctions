@@ -26,9 +26,6 @@ $breakpoints: (
     header {
         padding: 0 map-get($sizes, "xs");
     }
-    .listings-wrap {
-        margin: map-get($sizes, "xs");
-    }
     .content-and-sidebar {
         flex-wrap: wrap;
     }
@@ -101,9 +98,6 @@ $breakpoints: (
     }
     header, .login-out-btn {
         font-size: map-get($sizes, "med");
-    }
-    .listings-wrap {
-        margin: map-get($sizes, "lg");
     }
 }
 

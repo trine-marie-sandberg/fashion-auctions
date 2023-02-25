@@ -26,8 +26,14 @@ footer {
   text-decoration: underline;
 }
 .card-wrap {
-  max-width: 1200px;
+  //max-width: 1200px;
   transition: 150ms;
+}
+.card-img {
+  height: auto;
+  max-height: 150px;
+  width: 100%;
+  object-fit: contain;
 }
 .card-wrap:hover {
   box-shadow: 3px 3px 10px map-get($colours, "grey-contrast-light");

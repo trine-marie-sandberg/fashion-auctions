@@ -16,3 +16,18 @@ export function form() {
                     </form>`;
  return html;
 };
+
+export function auctionForm() {
+    const html =   `<form class="transparent-white border-grey-contrast-light border-radius-xs padding-xs" id="edit-avatar" onsubmit="return false">
+                      <label for="title">Title:</label>
+                      <input type="text" id="title" name="title" required>
+                      <label for="description">Description:</label>
+                      <input type="text" id="description" name="description" required>
+                      <label for="tags">Tags (separate,with,comma): </label>
+                      <input type="text" id="tags" name="tags" multiple arial-label="tags">
+                      <label for="media">Image url:</label>
+                      <input type="text" id="media" name="url">
+                      <button type="submit" class="btn bg-primary color-white border-grey-contrast-dark">Submit</button>
+                    </form>`;
+ return html;
+};

@@ -10,12 +10,6 @@ $colours: (
   "black": #2A2525,
 );
 
-@each $black, $val in $colours {
-    a {
-        color: #{$val};
-    }
-}
-
 @each $key, $val in $colours {
     .bg-#{$key} {
         background-color: $val;

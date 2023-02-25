@@ -1,30 +1,34 @@
 body {
     margin: 0;
     min-height: 100vh;
+    color: map-get($colours, "black");
 }
-
 a {
     text-decoration: none;
+    color: map-get($colours, "black");
 }
-
 h1, h2, h3 {
     font-family: "dejanire-headline", serif;
     font-weight: 300;
     font-style: normal;
 }
-
+h1 {
+    color: map-get($colours, "grey-contrast-dark");
+}
 p, li, button {
     font-family: "etna", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
-
 .img-auto {
     height: auto;
     width: 100%;
 }
 .center {
     margin: 0 auto;
+}
+.margin-no {
+    margin: 0;
 }
 .max-width-500 {
     max-width: 500px;
@@ -39,11 +43,9 @@ p, li, button {
 .fit-content-w {
     width: fit-content;
 }
-
 li {
     list-style-type: none;
 }
-
 .transparent-white {
     background: rgba(255, 255, 255, 0.9)
 }
