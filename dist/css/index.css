@@ -489,6 +489,9 @@
     padding: 1rem;
     margin: 10px;
   }
+  .listings-wrap {
+    padding: 1rem;
+  }
 }
 @media (min-width: 480px) {
   .responsive-test {
@@ -527,6 +530,9 @@
     padding: 4rem;
     margin: 5vw 10vw;
   }
+  .listings-wrap {
+    padding: 2rem;
+  }
 }
 @media (min-width: 1200px) {
   .responsive-test {
@@ -534,6 +540,9 @@
   }
   header, .login-out-btn {
     font-size: 1.5rem;
+  }
+  .listings-wrap {
+    padding: 1rem 10vw;
   }
 }
 @media (max-width: 720px) {
@@ -558,6 +567,10 @@
 
 .flex-center-v {
   align-items: center;
+}
+
+.flex-left {
+  justify-content: left;
 }
 
 .flex-wrap {

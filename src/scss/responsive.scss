@@ -49,6 +49,9 @@ $breakpoints: (
         padding: map-get($sizes, "sm");
         margin: 10px;
     }
+    .listings-wrap {
+        padding: map-get($sizes, "sm");
+    }
 }
 //Breakpoint sm
 @include breakpoint(map-get($breakpoints, "sm")) {
@@ -90,6 +93,9 @@ $breakpoints: (
         padding: map-get($sizes, "xl");
         margin: 5vw 10vw;
     }
+    .listings-wrap {
+        padding: map-get($sizes, "lg");
+    }
 }
 //breakpoint xl
 @include breakpoint(map-get($breakpoints, "xl")) {
@@ -98,6 +104,9 @@ $breakpoints: (
     }
     header, .login-out-btn {
         font-size: map-get($sizes, "med");
+    }
+    .listings-wrap {
+        padding: 1rem 10vw;
     }
 }
 

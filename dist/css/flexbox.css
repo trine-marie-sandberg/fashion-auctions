@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.flex-left {
+  justify-content: left;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
