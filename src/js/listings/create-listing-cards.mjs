@@ -27,7 +27,7 @@ export function displayPost(listing) {
                             <div class="listing-info-wrap padding-left-right-sm">
                               <p>Start at: $ ${highestBid}</p>
                               <h2 class="listing-name">${listing.title}</h2>
-                              <p>Seller: ${listing.seller.name}</p>
+                              <p>Ends: ${listing.endsAt}</p>
                               <p>Description: ${listing.description}</p>
                             </div>
                             <div>
