@@ -1,6 +1,7 @@
 import * as local from "../storage/localstorage.mjs";
 import * as html from "./html.mjs";
 import { creditHandler } from "./credits.mjs";
+import { createAuction } from "./list-item.mjs";
 
 function profileHandler() {
     
@@ -56,5 +57,10 @@ function profileHandler() {
                                      <p>My credits: $ ${profile.credits}</p>
                                      <p>My e-mail: ${profile.email}</p>
                                   </div>`;
+    const listBtn = document.getElementById("new-auction");
+    listBtn.addEventListener("click", (event) => {
+        console.log(event)
+    });
+    createAuction(profile, token);
 };
 profileHandler();
