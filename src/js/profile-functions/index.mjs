@@ -1,10 +1,14 @@
 import * as local from "../storage/localstorage.mjs";
 import * as html from "./html.mjs";
+import { creditHandler } from "./credits.mjs";
 
 function profileHandler() {
-
+    
     const token = local.storageLoad("accessToken");
     const profile = local.storageLoad("profile");
+    const creditBtn = document.getElementById("get-credits");
+    creditHandler(creditBtn, profile, token);
+
     let avatarUrl = profile.avatar;
     const userName = profile.name;
 
