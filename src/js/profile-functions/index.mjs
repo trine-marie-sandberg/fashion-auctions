@@ -22,7 +22,7 @@ function profileHandler() {
     avatarWrap.innerHTML = html.avatar(userName, avatarUrl);
 
     const formWrap = document.createElement("div");
-    formWrap.innerHTML = html.form();
+    formWrap.innerHTML = html.avatarForm();
     const form = formWrap.querySelector("form");
     form.addEventListener("submit", async () => {
         try {
@@ -37,7 +37,7 @@ function profileHandler() {
                     Authorization: `Bearer ${token}`,
                 },
             };
-            const response = await fetch(`https://nf-api.onrender.com/api/v1/auction/profiles/${userName}/media`, postData);
+            await fetch(`https://nf-api.onrender.com/api/v1/auction/profiles/${userName}/media`, postData);
             const saveUrl = local.storageLoad("profile");
             saveUrl["avatar"] = form.url.value;
             local.storageSave("profile", saveUrl);
@@ -50,6 +50,11 @@ function profileHandler() {
     const clickDiv = avatarWrap.querySelector("div");
     clickDiv.addEventListener("click", () => {
         avatarWrap.append(form);
+        form.style.display = "block";
+        const close = document.querySelector(".close");
+        close.addEventListener("click", (close) => {
+            form.style.display = "none";
+        });
     });
 
     const profileContainer = document.querySelector(".my-profile");

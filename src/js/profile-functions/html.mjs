@@ -1,6 +1,6 @@
 export function avatar(userName, avatarUrl) { 
     const html = `<div class="flex flex-wrap padding-xs">
-                      <h2 class="margin-xs">Welcome ${userName}</h2>
+                      <h2 class="margin-xs color-primary">Welcome ${userName}</h2>
                       <div>
                          <img src="${avatarUrl}" alt="Avatar placeholder" class="avatar bg-white">
                       </div> 
@@ -8,11 +8,19 @@ export function avatar(userName, avatarUrl) {
     return html;
 };
 
-export function form() {
-    const html =   `<form class="transparent-white border-grey-contrast-light border-radius-xs padding-xs" id="edit-avatar" onsubmit="return false">
-                      <label for="url">Avatar url:</label>
-                      <input type="text" id="url" name="url" required>
-                      <button type="submit" class="btn bg-primary color-white border-grey-contrast-dark">Submit</button>
+export function avatarForm() {
+    const html =   `<form class="bg-grey-contrast-slight border-radius-xs padding-xs color-black" id="edit-avatar" onsubmit="return false">
+                      <div class="flex flex-column">
+                        <div class="margin-left-right-xs flex flex-right">
+                          <i class="close fa-solid fa-x border-black border-radius-xs padding-xs color-black bg-white"></i>
+                        </div>
+                        <div class="flex flex-column padding-xs">
+                          <label class="padding-top-btm-xs" for="url">Avatar url:</label>
+                          <input class="padding-xs border-radius-xs border-grey-contrast-slight box-shaddow-grey-contrast-slight" type="text" id="url" name="url" required>
+                        </div>
+                        <div class="flex flex-column"></div>
+                        <button type="submit" class="btn bg-primary color-white border-grey-contrast-dark padding-xs margin-xs fit-content-w">Submit</button>
+                      </div>
                     </form>`;
  return html;
 };

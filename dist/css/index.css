@@ -313,6 +313,41 @@
   box-shadow: inset 0 2px 3px #2A2525;
 }
 
+.bg-red {
+  background-color: #500c0c;
+}
+
+.color-red {
+  color: #500c0c;
+}
+
+.border-red {
+  border: 1px solid;
+  border-color: #500c0c;
+}
+
+.border-btm-red {
+  border-bottom: 1px solid;
+  border-color: #500c0c;
+}
+
+.border-dashed-btm-red {
+  border-bottom: 2px dashed;
+  border-color: #500c0c;
+}
+
+.border-dashed-red {
+  border: 2px dashed #500c0c;
+}
+
+.border-t-dashed-red {
+  border-top: 2px dashed #500c0c;
+}
+
+.box-shaddow-red {
+  box-shadow: inset 0 2px 3px #500c0c;
+}
+
 .margin-xs {
   margin: 10px;
 }
@@ -474,7 +509,7 @@
     width: 50px;
   }
   .btn {
-    padding: 1rem 2rem;
+    padding: 10px 1.5rem;
     border-radius: 1.5rem;
   }
   .search {
@@ -544,6 +579,10 @@
   .listings-wrap {
     padding: 1rem 10vw;
   }
+  .btn {
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+  }
 }
 @media (max-width: 720px) {
   .topnav {
@@ -571,6 +610,10 @@
 
 .flex-left {
   justify-content: left;
+}
+
+.flex-right {
+  justify-content: right;
 }
 
 .flex-wrap {

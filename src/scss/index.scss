@@ -8,6 +8,7 @@ $colours: (
   "grey-contrast-light": #A89E9E,
   "grey-contrast-dark": #655E5E,
   "black": #2A2525,
+  "red": #500c0c,
 );
 
 @each $key, $val in $colours {

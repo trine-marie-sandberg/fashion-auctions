@@ -18,6 +18,10 @@
   justify-content: left;
 }
 
+.flex-right {
+  justify-content: right;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
