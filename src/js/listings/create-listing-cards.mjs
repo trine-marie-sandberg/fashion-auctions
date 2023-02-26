@@ -26,7 +26,7 @@ export function displayPost(listing) {
     if(!description) {
       shortDescription = "";
     } else if(description.length > 30) {
-      shortDescription = description.substring(0, 30) + " ...";
+      shortDescription = description.substring(0, 30) + "..";
     } else {
       shortDescription = description.substring(0, 30);
     };
@@ -38,6 +38,13 @@ export function displayPost(listing) {
       tags = listing.tags;
       for(let i = 0; i < listing.tags.length; i++) {
         sortedTags.push(" " + listing.tags[i]);
+      };
+      let shortedTags;
+      if(sortedTags.length === 0){
+        shortedTags = "";
+      } else if(sortedTags.length > 3) {
+        shortedTags = sortedTags.slice(0, 3) + "..";
+        sortedTags = shortedTags;
       };
     };
 

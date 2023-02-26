@@ -695,6 +695,10 @@ p, li, button {
   width: 100%;
 }
 
+.img-contain {
+  object-fit: contain;
+}
+
 .center {
   margin: 0 auto;
 }

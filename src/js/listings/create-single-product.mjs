@@ -12,7 +12,6 @@ export function displayProduct(product) {
         highestBid = 0;
     };
 
-    console.log(product);
     const productWrap = document.createElement("div");
     const productWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "margin-med"];
     productWrap.classList.add(...productWrapClasses);
@@ -24,7 +23,7 @@ export function displayProduct(product) {
                                       <h2>Product description</h2>
                                       <p class="max-width-500">${product.description}</p>
                                   </div>
-                                  <div class="border-radius-xs bg-white padding-sm border-xl fit-content-h">
+                                  <div class="border-radius-xs bg-white padding-sm border-xl fit-content-h margin-xs">
                                       <div class="flex flex-wrap padding-xs">
                                           <h3>${product.seller.name}</h3>
                                           <div>
@@ -49,7 +48,8 @@ export function displayProduct(product) {
 
     const imgContainer = productWrap.querySelector(".imgContainer");
     const img = document.createElement("img");
-    const imgClasses = ["img-auto", "border-grey-contrast-slight", "border-radius-xs"];
+    img.style.maxHeight = "35vh";
+    const imgClasses = ["img-auto", "img-contain", "border-white", "border-radius-xs", "bg-grey-contrast-slight"];
     let media = product.media;
 
     if(media.length === 0) {
