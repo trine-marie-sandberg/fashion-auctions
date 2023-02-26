@@ -7,7 +7,7 @@ export function getFormData(form, event) {
         description: form.description.value,
         tags: form.tags.value,
         media: [form.url.value],
-        endsAt: "2023-05-25T14:32:17.579Z",
+        //endsAt: "2023-05-25T14:32:17.579Z",
     };
 
     return data;
@@ -15,16 +15,13 @@ export function getFormData(form, event) {
 
 export async function createAuction(user, token, data) {
     try {
-        console.log(user, token);
-
+        const tag = data.tags.split(",");
         const auctionBody = {
             "title": data.title,
             "description": data.description,
-            "tags": [
-              data.tags
-            ],
+            "tags": tag,
             "media": data.media,
-            "endsAt": data.endsAt,
+            "endsAt": "2023-05-25T14:32:17.579Z",
         }
         const postData = {
             method: "POST",

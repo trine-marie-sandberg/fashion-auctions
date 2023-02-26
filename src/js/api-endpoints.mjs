@@ -5,4 +5,4 @@ export const register = "register";
 export const listings = "listings/";
 export const sortDesc = "?_seller=true&_bids=true&sort=created&sortOrder=desc";
 export const options = "?_seller=true&_bids=true&sort=created";
-export const sortByTag = "?_tag=fashion&_bids=true&sortOrder=desc";
+export const sortByTag = "?_tag=fashion&_bids=true&sortOrder=asc";
