@@ -9,7 +9,7 @@ export async function listingsHandler(listingsContainer) {
 
         if(listingsContainer) {
 
-            const listingsArray = await getListings(endpoint.api + endpoint.listings + endpoint.sortDesc, options.allListings);
+            const listingsArray = await getListings(endpoint.api + endpoint.listings + endpoint.sortByTag, options.allListings);
             listingsContainer.append(...listingsArray.map(displayPost));
         };
 
