@@ -71,10 +71,16 @@ function profileHandler() {
         auctionFormContainer.append(createForm)
         const form = auctionFormContainer.querySelector("form");
         form.innerHTML = html.auctionForm();
-        console.log(form)
         form.addEventListener("submit", (event) => {
+            const tags = form.tags.value;
+            console.log(tags)
             event.preventDefault();
-            createAuction(profile, token, getFormData(form, event))
+            if(tags.includes(" ")) {
+                alert("Please do not ad spaces in the tags field. Instead,separate,words,with,comma");
+            } else {
+                createAuction(profile, token, getFormData(form, event));
+            }
+            
         });
         //
     });
