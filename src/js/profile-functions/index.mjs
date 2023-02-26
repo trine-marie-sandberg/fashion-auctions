@@ -71,6 +71,7 @@ function profileHandler() {
         auctionFormContainer.append(createForm)
         const form = auctionFormContainer.querySelector("form");
         form.innerHTML = html.auctionForm();
+        console.log(form)
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             createAuction(profile, token, getFormData(form, event))

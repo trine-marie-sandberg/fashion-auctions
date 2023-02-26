@@ -6,21 +6,22 @@ export function getFormData(form, event) {
         title: form.title.value,
         description: form.description.value,
         tags: form.tags.value,
-        media: [form.url.value],
+        media: form.url.value,
         //endsAt: "2023-05-25T14:32:17.579Z",
     };
 
     return data;
 };
-
+let media = [];
 export async function createAuction(user, token, data) {
     try {
         const tag = data.tags.split(",");
+        media.push(data.media);
         const auctionBody = {
             "title": data.title,
             "description": data.description,
             "tags": tag,
-            "media": data.media,
+            "media": media,
             "endsAt": "2023-05-25T14:32:17.579Z",
         }
         const postData = {
