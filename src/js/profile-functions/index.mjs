@@ -1,7 +1,7 @@
 import * as local from "../storage/localstorage.mjs";
 import * as html from "./html.mjs";
 import { creditHandler } from "./credits.mjs";
-import { createAuction, getFormData } from "./list-item.mjs";
+import { createAuction, getFormData, listItem } from "./list-item.mjs";
 
 function profileHandler() {
     
@@ -58,31 +58,13 @@ function profileHandler() {
     });
 
     const profileContainer = document.querySelector(".my-profile");
-    profileContainer.innerHTML = `<div class="padding-left-right-med">
-                                     <p>My credits: $ ${profile.credits}</p>
-                                     <p>My e-mail: ${profile.email}</p>
-                                  </div>`;
+    profileContainer.innerHTML = html.userDetails(profile);
 
     const listBtn = document.getElementById("new-auction");
-    
-    listBtn.addEventListener("click", (event) => {
-        const auctionFormContainer = document.getElementById("auction-form-container");
-        const createForm = document.createElement("form");
-        auctionFormContainer.append(createForm)
-        const form = auctionFormContainer.querySelector("form");
-        form.innerHTML = html.auctionForm();
-        form.addEventListener("submit", (event) => {
-            const tags = form.tags.value;
-            console.log(tags)
-            event.preventDefault();
-            if(tags.includes(" ")) {
-                alert("Please do not ad spaces in the tags field. Instead,separate,words,with,comma");
-            } else {
-                createAuction(profile, token, getFormData(form, event));
-            }
-            
-        });
-        //
+    const auctionFormContainer = document.getElementById("auction-form-container");
+
+    listBtn.addEventListener("click", () => {
+        listItem(auctionFormContainer, profile, token);
     });
 };
 profileHandler();

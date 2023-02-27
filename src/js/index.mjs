@@ -22,9 +22,8 @@ const menuAccount = document.getElementById("account-menu");
 function accountMenu(token) {
     if(!token) {
         menuAccount.style.display = "none";
+    } else if(menuAccount) {
+        menuAccount.style.display = "block";
     };
 };
-
-if(menuAccount) {
-    accountMenu(token);
-};
+accountMenu(token);

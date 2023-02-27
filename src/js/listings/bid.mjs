@@ -1,6 +1,6 @@
 import * as local from "../storage/localstorage.mjs";
 export function bidHandler(id) {
-console.log(id)
+
     const html = `<form class="margin-xs">
                     <label for="amount">Amount: </label>
                     <input id="amount" type="number" name="amount" required>
@@ -37,6 +37,15 @@ console.log(id)
                 console.log("postdata: ", postData)
                 const response = await fetch(`https://nf-api.onrender.com/api/v1/auction/listings/${id}/bids`, postData);
                 console.log(response);
+                if(response.ok) {
+                    window.location.reload();
+                } if(!response.ok) {
+                    console.log(response.status)
+                    if(response.status === 403) {
+                        alert("Biding on your own auctions is not allowed");
+                    };
+                    alert("Something went wrong. Please make sure your bid is higher than current highest bid.")
+                }
             } catch(error) {
                 console.log(error);
             };

@@ -1,3 +1,5 @@
+import * as html from "./html.mjs";
+
 export function getFormData(form, event) {
 
     event.preventDefault();
@@ -38,4 +40,21 @@ export async function createAuction(user, token, data) {
     } catch(error) {
         console.log(error);
     };
+};
+
+export function listItem(container, profile, token) {
+    const createForm = document.createElement("form");
+    container.append(createForm)
+    const form = container.querySelector("form");
+    form.innerHTML = html.auctionForm();
+    form.addEventListener("submit", (event) => {
+        const tags = form.tags.value;
+        console.log(tags)
+        event.preventDefault();
+        if(tags.includes(" ")) {
+            alert("Please do not ad spaces in the tags field. Instead,separate,words,with,comma");
+        } else {
+            createAuction(profile, token, getFormData(form, event));
+        }
+    });
 };

@@ -1,3 +1,5 @@
+import { singleProduct } from "./html.mjs";
+
 export function displayProduct(product) {
 
     let bidArray = [];
@@ -15,36 +17,16 @@ export function displayProduct(product) {
     const productWrap = document.createElement("div");
     const productWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "margin-med"];
     productWrap.classList.add(...productWrapClasses);
+    const title = product.title;
+    const description = product.description;
+    const sellerName = product.seller.name;
+    const sellerAvatar = product.seller.avatar;
+    const amountOfBids = bids.length;
+    const created = product.created;
+    const tags = product.tags;
+    const endsAt = product.endsAt;
 
-    productWrap.innerHTML = `<div class="padding-sm">
-                                <div class="flex flex-wrap flex-between">
-                                  <div>
-                                      <h1>${product.title}</h1>
-                                      <h2>Product description</h2>
-                                      <p class="max-width-500">${product.description}</p>
-                                  </div>
-                                  <div class="bid-and-seller border-radius-xs bg-white padding-sm border-xl fit-content-h margin-xs">
-                                      <div class="flex flex-wrap padding-xs">
-                                          <h3>${product.seller.name}</h3>
-                                          <div>
-                                              <img src="${product.seller.avatar}" class="avatar margin-left-right-xs">
-                                          </div>
-                                      </div>
-                                      <p>Current highest bid: $ ${highestBid}</p>
-                                      <p>Bids: ${bids.length}</p>
-                                      <button class="bid-btn btn bg-primary color-white border-grey-contrast-dark">Make a bid</button>
-                                  </div> 
-                                </div>
-                                <div class="imgContainer margin-top-btm-sm"></div>
-                                <div class="flex flex-between flex-wrap padding-left-right-xs bg-white border-radius-xs">
-                                  <div>
-                                     <p>Created: ${product.created}</p>
-                                     <p>Tags: ${product.tags}</p>
-                                  </div>
-                                  <p>Auction ends: ${product.endsAt}</p>
-                                </div>
-                             </div>
-                            `;
+    productWrap.innerHTML = singleProduct(title, description, sellerName, sellerAvatar, highestBid, amountOfBids, created, tags, endsAt);
 
     const imgContainer = productWrap.querySelector(".imgContainer");
     const img = document.createElement("img");

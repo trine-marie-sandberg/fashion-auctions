@@ -1,3 +1,5 @@
+import * as html from "./html.mjs";
+
 export function displayPost(listing) {
 
     const cardWrap = document.createElement("div");
@@ -9,13 +11,15 @@ export function displayPost(listing) {
         media = ["./src/assets/img/placeholder-img.jpg"];
     } else {
         media = media[0];
-    }
+    };
+
     let bidArray = [];
     const bids = listing.bids;
     for (let i = 0; i < bids.length; i++) {
         const bid = bids[i].amount;
         bidArray.push(bid);
     };
+    
     let highestBid = Math.max(...bidArray);
     if(bidArray.length === 0) {
         highestBid = 0;
@@ -50,19 +54,9 @@ export function displayPost(listing) {
 
     const id = listing.id;
     const href = "./product-details/?id=" + id;
-    cardWrap.innerHTML = `<a class="card even-columns bg-white padding-xs">
-                            <div class="listing-info-wrap padding-left-right-sm">
-                              <p class="margin-no">Start at: $ ${highestBid}</p>
-                              <h2 class="listing-name margin-xs">${listing.title}</h2>
-                            </div>
-                            <div>
-                              <img class="card-img" onerror="this.onerror=null; this.src='./src/assets/img/placeholder-img.jpg';">
-                              <p class="padding-left-right-sm">${shortDescription}</p>
-                              <p class="padding-left-right-sm">Tags: ${sortedTags}</p>
-                              <p class="padding-left-right-sm">Ends: ${listing.endsAt}</p>
-                            </div>
-                          </a>`;
-  
+    const title = listing.title;
+    const endsAt = listing.endsAt;
+    cardWrap.innerHTML = html.listingCards(highestBid, title, shortDescription, sortedTags, endsAt);
     cardWrap.querySelector("img").src = media;
     cardWrap.querySelector("img").alt = listing.title;
     cardWrap.querySelector("a").href = href;

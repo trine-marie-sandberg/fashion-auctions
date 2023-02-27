@@ -25,6 +25,14 @@ export function avatarForm() {
  return html;
 };
 
+export function userDetails(profile) {
+  const html = `<div class="padding-left-right-med">
+                  <p>My credits: $ ${profile.credits}</p>
+                  <p>My e-mail: ${profile.email}</p>
+                </div>`;
+  return html;
+};
+
 export function auctionForm() {
     const html =   `<form class="transparent-white border-grey-contrast-light border-radius-xs padding-xs" id="edit-avatar" onsubmit="return false">
                       <label for="title">Title:</label>
