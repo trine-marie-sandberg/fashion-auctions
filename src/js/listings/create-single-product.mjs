@@ -23,7 +23,7 @@ export function displayProduct(product) {
                                       <h2>Product description</h2>
                                       <p class="max-width-500">${product.description}</p>
                                   </div>
-                                  <div class="border-radius-xs bg-white padding-sm border-xl fit-content-h margin-xs">
+                                  <div class="bid-and-seller border-radius-xs bg-white padding-sm border-xl fit-content-h margin-xs">
                                       <div class="flex flex-wrap padding-xs">
                                           <h3>${product.seller.name}</h3>
                                           <div>
@@ -32,7 +32,7 @@ export function displayProduct(product) {
                                       </div>
                                       <p>Current highest bid: $ ${highestBid}</p>
                                       <p>Bids: ${bids.length}</p>
-                                      <button class="btn bg-primary color-white border-grey-contrast-dark">Make a bid</button>
+                                      <button class="bid-btn btn bg-primary color-white border-grey-contrast-dark">Make a bid</button>
                                   </div> 
                                 </div>
                                 <div class="imgContainer margin-top-btm-sm"></div>
