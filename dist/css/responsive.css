@@ -1,9 +1,9 @@
 /* Error: Undefined variable.
  *    ,
- * 21 |         margin-bottom: map-get($sizes, "med");
+ * 18 |         margin-bottom: map-get($sizes, "med");
  *    |                                ^^^^^^
  *    '
- *   src\scss\responsive.scss 21:32  @content
+ *   src\scss\responsive.scss 18:32  @content
  *   src\scss\responsive.scss 11:9   breakpoint()
  *   src\scss\responsive.scss 16:1   root stylesheet */
 
@@ -15,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Undefined variable.\a    \2577 \a 21 \2502          margin-bottom: map-get($sizes, "med");\d\a    \2502                                 ^^^^^^\a    \2575 \a   src\\scss\\responsive.scss 21:32  @content\a   src\\scss\\responsive.scss 11:9   breakpoint()\a   src\\scss\\responsive.scss 16:1   root stylesheet';
+  content: 'Error: Undefined variable.\a    \2577 \a 18 \2502          margin-bottom: map-get($sizes, "med");\d\a    \2502                                 ^^^^^^\a    \2575 \a   src\\scss\\responsive.scss 18:32  @content\a   src\\scss\\responsive.scss 11:9   breakpoint()\a   src\\scss\\responsive.scss 16:1   root stylesheet';
 }

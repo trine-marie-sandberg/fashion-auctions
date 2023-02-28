@@ -489,9 +489,6 @@
 }
 
 @media (min-width: 0) {
-  .responsive-test {
-    background-color: purple;
-  }
   h1, h2, h3 {
     margin-bottom: 1.5rem;
   }
@@ -527,11 +524,11 @@
   .listings-wrap {
     padding: 1rem;
   }
+  .quote {
+    margin: 5px;
+  }
 }
 @media (min-width: 480px) {
-  .responsive-test {
-    background-color: #395658;
-  }
   .login-form-bg {
     padding: 2rem;
     margin: 10vw;
@@ -539,11 +536,14 @@
   .auth-background {
     background-image: url(https://www.dropbox.com/s/34vnbzl7pqm71kq/login-img-mobile.jpg?raw=1);
   }
+  .quote-down {
+    margin-top: 5vw;
+  }
+  .quote {
+    margin: 0;
+  }
 }
 @media (min-width: 720px) {
-  .responsive-test {
-    background-color: #FBE8BC;
-  }
   #mobile-menu-btn {
     display: none;
   }
@@ -552,9 +552,6 @@
   }
 }
 @media (min-width: 1050px) {
-  .responsive-test {
-    background-color: #A89E9E;
-  }
   .content-and-sidebar {
     flex-wrap: nowrap;
   }
@@ -568,11 +565,11 @@
   .listings-wrap {
     padding: 2rem;
   }
+  .quote-wrap {
+    margin-right: 10vw;
+  }
 }
 @media (min-width: 1200px) {
-  .responsive-test {
-    background-color: #2A2525;
-  }
   header, .login-out-btn {
     font-size: 1.5rem;
   }
@@ -582,6 +579,9 @@
   .btn {
     padding: 1rem 2rem;
     border-radius: 1.5rem;
+  }
+  .quote-wrap {
+    margin-right: 15vw;
   }
 }
 @media (max-width: 720px) {
@@ -704,6 +704,20 @@ footer {
 #listings-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.home-img {
+  width: 100%;
+  height: 20vw;
+  max-height: 200px;
+  border: dashed #A89E9E 4px;
+  border-radius: 100%;
+}
+
+.quote {
+  max-width: 200px;
+  height: fit-content;
+  border-left: solid 2px #A89E9E;
 }
 
 body {

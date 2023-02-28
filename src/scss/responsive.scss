@@ -14,9 +14,6 @@ $breakpoints: (
 
 // Breakpoint start (default = xs:0)
 @include breakpoint {
-    .responsive-test {
-        background-color: purple;
-    }
     h1, h2, h3 {
         margin-bottom: map-get($sizes, "med");
     }
@@ -52,12 +49,12 @@ $breakpoints: (
     .listings-wrap {
         padding: map-get($sizes, "sm");
     }
+    .quote {
+        margin: 5px;
+      }
 }
 //Breakpoint sm
 @include breakpoint(map-get($breakpoints, "sm")) {
-    .responsive-test {
-        background-color: map-get($colours, "primary");
-    }
     .login-form-bg {
         padding: map-get($sizes, "lg");
         margin: 10vw;
@@ -65,12 +62,15 @@ $breakpoints: (
     .auth-background {
         background-image: url(https://www.dropbox.com/s/34vnbzl7pqm71kq/login-img-mobile.jpg?raw=1);
       }
+      .quote-down {
+        margin-top: 5vw;
+      }
+      .quote {
+        margin: 0;
+      }
 }
 //breakpoint med
 @include breakpoint(map-get($breakpoints, "med")) {
-    .responsive-test {
-        background-color: map-get($colours, "secondary");
-    }
     #mobile-menu-btn {
         display: none;
     }
@@ -80,9 +80,6 @@ $breakpoints: (
 }
 //breakpoint lg
 @include breakpoint(map-get($breakpoints, "lg")) {
-    .responsive-test {
-        background-color: map-get($colours, "grey-contrast-light");
-    }
     .content-and-sidebar {
         flex-wrap: nowrap;
     }
@@ -96,12 +93,12 @@ $breakpoints: (
     .listings-wrap {
         padding: map-get($sizes, "lg");
     }
+    .quote-wrap {
+        margin-right: 10vw;
+    }
 }
 //breakpoint xl
 @include breakpoint(map-get($breakpoints, "xl")) {
-    .responsive-test {
-        background-color: map-get($colours, "black");
-    }
     header, .login-out-btn {
         font-size: map-get($sizes, "med");
     }
@@ -111,6 +108,9 @@ $breakpoints: (
     .btn {
         padding: map-get($sizes, "sm") map-get($sizes, "lg");
         border-radius: map-get($sizes, "med");
+    }
+    .quote-wrap {
+        margin-right: 15vw;
     }
 }
 
