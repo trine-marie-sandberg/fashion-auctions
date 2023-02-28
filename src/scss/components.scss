@@ -47,9 +47,13 @@ footer {
   max-height: 200px;
   border: dashed map-get($colours, "grey-contrast-light") 4px;
   border-radius: 100%;
+  margin: 5px;
 }
 .quote {
-  max-width: 200px;
+  margin: 0;
   height: fit-content;
   border-left: solid 2px map-get($colours, "grey-contrast-light");
+}
+.quote-down {
+  margin-top: 3vw;
 }

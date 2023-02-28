@@ -525,7 +525,8 @@
     padding: 1rem;
   }
   .quote {
-    margin: 5px;
+    font-size: 13px;
+    max-width: 110px;
   }
 }
 @media (min-width: 480px) {
@@ -536,11 +537,9 @@
   .auth-background {
     background-image: url(https://www.dropbox.com/s/34vnbzl7pqm71kq/login-img-mobile.jpg?raw=1);
   }
-  .quote-down {
-    margin-top: 5vw;
-  }
   .quote {
-    margin: 0;
+    font-size: 1rem;
+    max-width: 200px;
   }
 }
 @media (min-width: 720px) {
@@ -581,7 +580,10 @@
     border-radius: 1.5rem;
   }
   .quote-wrap {
-    margin-right: 15vw;
+    margin-right: 10vw;
+  }
+  .quote {
+    font-size: 1rem;
   }
 }
 @media (max-width: 720px) {
@@ -712,12 +714,17 @@ footer {
   max-height: 200px;
   border: dashed #A89E9E 4px;
   border-radius: 100%;
+  margin: 5px;
 }
 
 .quote {
-  max-width: 200px;
+  margin: 0;
   height: fit-content;
   border-left: solid 2px #A89E9E;
+}
+
+.quote-down {
+  margin-top: 3vw;
 }
 
 body {

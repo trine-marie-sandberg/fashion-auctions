@@ -50,7 +50,8 @@ $breakpoints: (
         padding: map-get($sizes, "sm");
     }
     .quote {
-        margin: 5px;
+        font-size: 13px;
+        max-width: 110px;
       }
 }
 //Breakpoint sm
@@ -62,11 +63,9 @@ $breakpoints: (
     .auth-background {
         background-image: url(https://www.dropbox.com/s/34vnbzl7pqm71kq/login-img-mobile.jpg?raw=1);
       }
-      .quote-down {
-        margin-top: 5vw;
-      }
       .quote {
-        margin: 0;
+        font-size: 1rem;
+        max-width: 200px;
       }
 }
 //breakpoint med
@@ -110,8 +109,11 @@ $breakpoints: (
         border-radius: map-get($sizes, "med");
     }
     .quote-wrap {
-        margin-right: 15vw;
+        margin-right: 10vw;
     }
+    .quote {
+        font-size: 1rem;
+      }
 }
 
 // max-width
