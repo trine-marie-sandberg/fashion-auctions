@@ -57,3 +57,10 @@ footer {
 .quote-down {
   margin-top: 3vw;
 }
+.display-users-auctions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.edit-card-btn {
+  display: none;
+}

@@ -1,16 +1,19 @@
 export function listingCards(highestBid, title, shortDescription, sortedTags, endsAt) {
-    const html = `<a class="card even-columns bg-white padding-xs">
-                    <div class="listing-info-wrap padding-left-right-sm">
-                      <p class="margin-no">Start at: $ ${highestBid}</p>
-                      <h2 class="listing-name margin-xs">${title}</h2>
-                    </div>
-                    <div>
-                      <img class="card-img" onerror="this.onerror=null; this.src='./src/assets/img/placeholder-img.jpg';">
-                      <p class="padding-left-right-sm">${shortDescription}</p>
-                      <p class="padding-left-right-sm">Tags: ${sortedTags}</p>
-                      <p class="padding-left-right-sm">Ends: ${endsAt}</p>
-                    </div>
-                  </a>`;
+    const html = `<div>
+                    <a class="card even-columns bg-white padding-xs">
+                      <div class="listing-info-wrap padding-left-right-sm">
+                        <p class="margin-no">${highestBid}</p>
+                        <h2 class="listing-name margin-xs">${title}</h2>
+                      </div>
+                      <div>
+                        <img class="card-img" onerror="this.onerror=null; this.src='./src/assets/img/placeholder-img.jpg';">
+                        <p class="padding-left-right-sm">${shortDescription}</p>
+                        <p class="padding-left-right-sm">Tags: ${sortedTags}</p>
+                        <p class="padding-left-right-sm">Ends: ${endsAt}</p>
+                      </div>
+                    </a>
+                    <button class="edit-card-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                  </div>`;
   return html;
 };
 

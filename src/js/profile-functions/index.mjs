@@ -2,6 +2,7 @@ import * as local from "../storage/localstorage.mjs";
 import * as html from "./html.mjs";
 import { creditHandler } from "./credits.mjs";
 import { createAuction, getFormData, listItem } from "./list-item.mjs";
+import { getUserAuctions } from "./users-auctions.mjs";
 
 function profileHandler() {
     
@@ -66,5 +67,8 @@ function profileHandler() {
     listBtn.addEventListener("click", () => {
         listItem(auctionFormContainer, profile, token);
     });
+
+    const userAuctionsContainer = document.querySelector(".card-container");
+    getUserAuctions(userAuctionsContainer);
 };
 profileHandler();

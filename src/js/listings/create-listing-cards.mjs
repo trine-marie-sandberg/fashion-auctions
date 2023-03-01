@@ -14,16 +14,30 @@ export function displayPost(listing) {
     };
 
     let bidArray = [];
-    const bids = listing.bids;
+    let bids = listing.bids;
+    let bid;
+    let totalBids;
+    if(bids) {
+      bids = listing.bids;
     for (let i = 0; i < bids.length; i++) {
-        const bid = bids[i].amount;
-        bidArray.push(bid);
-    };
+        bid = bids[i];
+        bidArray.push(bid.amount);        
+    }
+    } else {
+      bid = listing._count;
+      totalBids = bid.bids;
+      
+      bidArray.push(totalBids);
+    };console.log(totalBids)
     
-    let highestBid = Math.max(...bidArray);
-    if(bidArray.length === 0) {
-        highestBid = 0;
-    };
+    let highestBid;
+    if(window.location.href.includes("/my-account/")) {
+        highestBid = "Total bids: " + totalBids;
+    } else if(bidArray.length === 0) {
+      highestBid = 0;
+    } else {
+      highestBid = "Current bid: " + Math.max(...bidArray);
+    }
 
     const description = listing.description;
     let shortDescription;
@@ -53,13 +67,23 @@ export function displayPost(listing) {
     };
 
     const id = listing.id;
-    const href = "./product-details/?id=" + id;
+    let href;
+    if(window.location.href.includes("/my-account/")) {
+      href = "../product-details/?id=" + id;
+    } else {
+      href = "./product-details/?id=" + id;
+    };
     const title = listing.title;
     const endsAt = listing.endsAt;
     cardWrap.innerHTML = html.listingCards(highestBid, title, shortDescription, sortedTags, endsAt);
+
+    if(window.location.href.includes("/my-account/")) {
+      cardWrap.querySelector("button").style.display = "block";
+    };
+
     cardWrap.querySelector("img").src = media;
     cardWrap.querySelector("img").alt = listing.title;
     cardWrap.querySelector("a").href = href;
     
     return cardWrap
-  }
+  };
