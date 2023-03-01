@@ -79,8 +79,9 @@ export function displayPost(listing) {
 
     if(window.location.href.includes("/my-account/")) {
       const button = cardWrap.querySelector("button");
+      const editForm = cardWrap.querySelector(".edit-form");
       button.style.display = "block";
-      editAuction(button);
+      editAuction(button, editForm);
     };
     cardWrap.querySelector("img").src = media;
     cardWrap.querySelector("img").alt = listing.title;

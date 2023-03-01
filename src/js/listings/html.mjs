@@ -13,6 +13,7 @@ export function listingCards(highestBid, title, shortDescription, sortedTags, en
                       </div>
                     </a>
                     <button class="edit-card-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <div class="edit-form"></div>
                   </div>`;
   return html;
 };
