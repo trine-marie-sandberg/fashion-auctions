@@ -1,4 +1,5 @@
 import * as html from "./html.mjs";
+import { editAuction } from "../profile-functions/edit-auction.mjs";
 
 export function displayPost(listing) {
 
@@ -26,18 +27,17 @@ export function displayPost(listing) {
     } else {
       bid = listing._count;
       totalBids = bid.bids;
-      
       bidArray.push(totalBids);
-    };console.log(totalBids)
+    };
     
     let highestBid;
     if(window.location.href.includes("/my-account/")) {
         highestBid = "Total bids: " + totalBids;
     } else if(bidArray.length === 0) {
-      highestBid = 0;
+      highestBid = "No bids";
     } else {
       highestBid = "Current bid: " + Math.max(...bidArray);
-    }
+    };
 
     const description = listing.description;
     let shortDescription;
@@ -78,9 +78,10 @@ export function displayPost(listing) {
     cardWrap.innerHTML = html.listingCards(highestBid, title, shortDescription, sortedTags, endsAt);
 
     if(window.location.href.includes("/my-account/")) {
-      cardWrap.querySelector("button").style.display = "block";
+      const button = cardWrap.querySelector("button");
+      button.style.display = "block";
+      editAuction(button);
     };
-
     cardWrap.querySelector("img").src = media;
     cardWrap.querySelector("img").alt = listing.title;
     cardWrap.querySelector("a").href = href;

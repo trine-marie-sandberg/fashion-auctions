@@ -47,3 +47,13 @@ export function auctionForm() {
                     </form>`;
  return html;
 };
+
+export function edit() {
+  const html = `<form id="edit-auction" class="transparent-white border-grey-contrast-light border-radius-xs padding-xs">
+                  <div>
+                    <label for""></label>
+                    <input id="">
+                  </div>
+                </form>`;
+  return html;
+};

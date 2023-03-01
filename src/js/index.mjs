@@ -19,11 +19,13 @@ loginOutBtn.addEventListener("click", () => {
 
 loginOutStyles(loginOutBtn, token);
 const menuAccount = document.getElementById("account-menu");
-function accountMenu(token) {
-    if(!token) {
-        menuAccount.style.display = "none";
-    } else if(menuAccount) {
-        menuAccount.style.display = "block";
+function accountMenu(token, menuAccount) {
+    if(menuAccount) {
+        if(!token) {
+            menuAccount.style.display = "none";
+        } else {
+            menuAccount.style.display = "block";
+        };
     };
 };
 accountMenu(token);
