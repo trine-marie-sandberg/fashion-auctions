@@ -17,3 +17,12 @@ export const auth = {
         Authorization: `Bearer ${token}`,
     },
 };
+
+export const put = {
+
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+    },
+};
