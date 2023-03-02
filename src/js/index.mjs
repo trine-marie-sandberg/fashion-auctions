@@ -19,18 +19,21 @@ loginOutBtn.addEventListener("click", () => {
 
 loginOutStyles(loginOutBtn, token);
 const menuAccount = document.getElementById("account-menu");
-console.log(menuAccount)
 const avatar = document.querySelector(".avatar");
 const profile = local.storageLoad("profile");
 const accountLink = document.querySelector(".account-link");
+const accountHref = document.querySelector(".account-href");
 const welcomeText = document.querySelector(".welcome-text");
 function accountMenu(token, menuAccount) {
     if(menuAccount) {
         if(!token) {
-            menuAccount.style.display = "none";
             accountLink.style.display = "none";
+            accountHref.style.display = "none";
+            welcomeText.innerHTML = `Welcome guest <i class="fa-regular fa-face-smile-beam"></i>`;
         } else {
-            menuAccount.style.display = "block";
+            accountLink.style.display = "block";
+            accountHref.style.display = "block";
+            console.log(accountLink)
             if(profile.avatar) {
                 avatar.src = profile.avatar;
                 avatar.alt = "My profile picture";
