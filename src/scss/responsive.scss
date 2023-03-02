@@ -20,9 +20,6 @@ $breakpoints: (
     header, .login-out-btn {
         font-size: map-get($sizes, "med");
     }
-    header {
-        padding: 0 map-get($sizes, "xs");
-    }
     .content-and-sidebar {
         flex-wrap: wrap;
     }

@@ -49,7 +49,12 @@ export function auctionForm() {
 };
 
 export function edit() {
-  const html = `<form id="edit-auction" class="transparent-white border-grey-contrast-light border-radius-xs padding-xs">
+  const html = `<form id="edit-auction" class="bg-secondary border-grey-contrast-light border-radius-xs padding-xs">
+                  <div>
+                    <div class="margin-left-right-xs flex flex-right">
+                    <i class="close-form fa-solid fa-x border-black border-radius-xs padding-xs color-black bg-white"></i>
+                    </div>
+                  </div>
                   <div>
                     <label for"input">Input</label>
                     <input id="input">

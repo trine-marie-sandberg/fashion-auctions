@@ -32,7 +32,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 95%;
-    margin: 0 auto;
 }
 
 .even-columns > * {
@@ -46,11 +45,9 @@
 
 .content-and-sidebar > *:nth-child(1) {
     flex-wrap: wrap;
-    flex: 1 1 10%;
-    flex-grow: 1;
+    flex: 1 1 15%;
 }
 
 .content-and-sidebar > *:nth-child(2) {
-    flex: 1 1 90%;
-    flex-grow: 2;
+    flex: 1 1 85%;
 }

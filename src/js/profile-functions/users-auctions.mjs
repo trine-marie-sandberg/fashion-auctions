@@ -1,7 +1,6 @@
 import * as url from "../api-endpoints.mjs";
 import * as local from "../storage/localstorage.mjs";
 import * as header from "../headers/index.mjs";
-import * as html from "../listings/html.mjs";
 import { getListings } from "../listings/get-listings.mjs";
 import { displayPost } from "../listings/create-listing-cards.mjs";
 

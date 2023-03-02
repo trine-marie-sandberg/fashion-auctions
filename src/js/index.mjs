@@ -19,13 +19,24 @@ loginOutBtn.addEventListener("click", () => {
 
 loginOutStyles(loginOutBtn, token);
 const menuAccount = document.getElementById("account-menu");
+console.log(menuAccount)
+const avatar = document.querySelector(".avatar");
+const profile = local.storageLoad("profile");
+const accountLink = document.querySelector(".account-link");
+const welcomeText = document.querySelector(".welcome-text");
 function accountMenu(token, menuAccount) {
     if(menuAccount) {
         if(!token) {
             menuAccount.style.display = "none";
+            accountLink.style.display = "none";
         } else {
             menuAccount.style.display = "block";
+            if(profile.avatar) {
+                avatar.src = profile.avatar;
+                avatar.alt = "My profile picture";
+                welcomeText.innerText = `Welcome ${profile.name} !`
+            };
         };
     };
 };
-accountMenu(token);
+accountMenu(token, menuAccount);

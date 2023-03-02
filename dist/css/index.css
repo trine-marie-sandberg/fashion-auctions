@@ -495,9 +495,6 @@
   header, .login-out-btn {
     font-size: 1.5rem;
   }
-  header {
-    padding: 0 10px;
-  }
   .content-and-sidebar {
     flex-wrap: wrap;
   }
@@ -631,7 +628,6 @@
   display: flex;
   flex-wrap: wrap;
   height: 95%;
-  margin: 0 auto;
 }
 
 .even-columns > * {
@@ -645,22 +641,25 @@
 
 .content-and-sidebar > *:nth-child(1) {
   flex-wrap: wrap;
-  flex: 1 1 10%;
-  flex-grow: 1;
+  flex: 1 1 15%;
 }
 
 .content-and-sidebar > *:nth-child(2) {
-  flex: 1 1 90%;
-  flex-grow: 2;
+  flex: 1 1 85%;
 }
 
 header {
-  padding: 0 8vw;
+  padding: 5px 4vw;
 }
 
 footer {
   margin-top: auto;
   margin-bottom: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 50px;
 }
 
 .avatar {
@@ -670,6 +669,15 @@ footer {
   padding: 1px;
   background-color: #A89E9E;
   border: solid 1px #fff;
+}
+
+.small-avatar {
+  height: 35px;
+  width: 35px;
+}
+
+.welcome-text {
+  font-size: 15px;
 }
 
 .login-out-btn {
@@ -686,6 +694,10 @@ footer {
 
 .navlink a.active {
   text-decoration: underline;
+}
+
+#account-menu {
+  position: static;
 }
 
 .card-wrap {
@@ -706,6 +718,11 @@ footer {
 #listings-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.users-auctions-wrap {
+  padding: 0 5vw;
 }
 
 .home-img {
@@ -730,9 +747,14 @@ footer {
 .display-users-auctions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
 .edit-card-btn {
+  display: none;
+}
+
+.delete-btn {
   display: none;
 }
 
@@ -802,6 +824,10 @@ li {
 
 .transparent-white {
   background: rgba(255, 255, 255, 0.9);
+}
+
+.active-link {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */

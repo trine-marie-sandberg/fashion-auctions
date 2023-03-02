@@ -4,7 +4,7 @@ import { editAuction } from "../profile-functions/edit-auction.mjs";
 export function displayPost(listing) {
 
     const cardWrap = document.createElement("div");
-    const cardWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "padding-top-btm-med", "margin-xs"];
+    const cardWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "padding-top-btm-med"];
     cardWrap.classList.add(...cardWrapClasses);
     let media = [listing.media];
 
@@ -36,7 +36,7 @@ export function displayPost(listing) {
     } else if(bidArray.length === 0) {
       highestBid = "No bids";
     } else {
-      highestBid = "Current bid: " + Math.max(...bidArray);
+      highestBid = "Current bid: $ " + Math.max(...bidArray);
     };
 
     const description = listing.description;
@@ -78,10 +78,15 @@ export function displayPost(listing) {
     cardWrap.innerHTML = html.listingCards(highestBid, title, shortDescription, sortedTags, endsAt);
 
     if(window.location.href.includes("/my-account/")) {
-      const button = cardWrap.querySelector("button");
-      const editForm = cardWrap.querySelector(".edit-form");
-      button.style.display = "block";
-      editAuction(button, editForm);
+      const editButton = cardWrap.querySelector(".edit-card-btn");
+      const delBtn = cardWrap.querySelector(".delete-btn");
+      const editFormWrap = cardWrap.querySelector(".edit-form");
+      const highlightBtns = cardWrap.querySelector(".highlight-btns")
+      editButton.style.display = "block";
+      editAuction(editButton, editFormWrap, delBtn, highlightBtns);
+      if(editButton.style.display = "block") {
+        delBtn.style.display = "block";
+      };
     };
     cardWrap.querySelector("img").src = media;
     cardWrap.querySelector("img").alt = listing.title;

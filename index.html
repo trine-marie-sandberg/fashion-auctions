@@ -12,12 +12,12 @@
     <script defer src="./src/js/index.mjs" type="module"></script>
 </head>
 <body class="bg-grey-bg flex flex-column">
-    <header class="flex flex-between flex-center-h bg-white color-black">
+    <header class="flex flex-between flex-center-h bg-white color-black border-btm-grey-contrast-slight">
         <div class="flex flex-center-h">
             <img src="./src/assets/img/logo.png" class="logo">
             <nav class="nav flex flex-center-v">
                 <ul class="topnav flex" id="topnav">
-                    <li class="padding-xs"><a href="./index.html" class="nav-link">Listings</a></li>
+                    <li class="padding-xs active-link"><a href="./index.html" class="nav-link">Listings</a></li>
                     <li class="padding-xs"><a href="./about/" class="nav-link">About</a></li>
                     <li>
                         <button class="border-white bg-white login-out-btn color-black padding-xs">Login</button>
@@ -30,30 +30,28 @@
             <i class="fa-solid fa-magnifying-glass padding-xs"></i>
             <input type="text" class="search half-size-h border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs">
         </div>
+        <a href="./my-account/" class="account-link flex flex-wrap">
+            <img src="./src/assets/img/avatar-placeholder.png" class="avatar small-avatar" alt="Avatar placeholder">
+        </a> 
     </header>
     <main>
         <div class="flex flex-column">
             <div class="content-and-sidebar">
-                <div class="bg-white border-t-dashed-grey-contrast-slight" id="account-menu">
+                <div class="bg-white fit-content-h" id="account-menu">
+                    <p class="welcome-text bg-secondary padding-sm"></p>
                     <ul class="flex flex-wrap">
-                        <div class="padding-xs margin-xs border-radius-sm border-grey-contrast-slight fit-content-h">
-                            <li>
-                                <a href="./my-account/">account <i class="fa-solid fa-user padding-left-right-xs"></i></a> 
-                            </li>
+                        <div class="padding-top-btm-xs margin-xs fit-content-h">
+                            <i class="fa-solid fa-user padding-left-right-xs"></i>
+                            <a href="./my-account/">account</a> 
                         </div>
-                        <div class="padding-xs margin-xs border-radius-sm border-grey-contrast-slight fit-content-h">
-                            <li class="flex border-radius-sm">
-                                My listings
-                                <i class="fa-solid fa-list padding-left-right-xs"></i>
-                            </li>
-                        </div>
-                        
-                        <div class="padding-xs margin-xs border-radius-sm border-grey-contrast-slight fit-content-h">
-                            <li class="flex">
-                                Close
-                                <i class="fa-solid fa-arrow-up-from-bracket  padding-left-right-xs"></i>
-                            </li>
-                        </div>
+                        <li class="padding-top-btm-xs margin-xs fit-content-h flex">
+                            <i class="fa-solid fa-list padding-left-right-xs"></i>
+                            <p class="margin-no">My listings</p>
+                        </li>
+                        <li class="padding-top-btm-xs margin-xs fit-content-h flex flex-wrap">
+                            <i class="fa-solid fa-arrow-up-from-bracket padding-left-right-xs"></i>
+                            <p class="margin-no">Close</p>
+                        </li>
                     </ul>
                 </div>
                 <div class="flex flex-column flex-left">
