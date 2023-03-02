@@ -34,7 +34,7 @@ function accountMenu(token, menuAccount) {
             if(profile.avatar) {
                 avatar.src = profile.avatar;
                 avatar.alt = "My profile picture";
-                welcomeText.innerText = `Welcome ${profile.name} !`
+                welcomeText.innerHTML = `Hi ${profile.name} <i class="fa-regular fa-face-smile-beam"></i>`;
             };
         };
     };
