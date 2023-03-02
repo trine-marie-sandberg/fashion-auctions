@@ -3,7 +3,6 @@ import * as html from "./html.mjs";
 import { creditHandler } from "./credits.mjs";
 import { createAuction, getFormData, listItem } from "./list-item.mjs";
 import { getUserAuctions } from "./users-auctions.mjs";
-import { editAuction } from "./edit-auction.mjs";
 
 function profileHandler() {
     

@@ -43,22 +43,39 @@ export function auctionForm() {
                       <input type="text" id="tags" name="tags" multiple arial-label="tags">
                       <label for="media">Image url:</label>
                       <input type="text" id="media" name="url">
+                      <div>
+                        <label for="ends">Ends: </label>
+                        <input id="ends" type="datetime-local" name="ends">
+                      </div>
                       <button type="submit" class="btn bg-primary color-white border-grey-contrast-dark">Submit</button>
                     </form>`;
  return html;
 };
 
 export function edit() {
-  const html = `<form id="edit-auction" class="bg-secondary border-grey-contrast-light border-radius-xs padding-xs">
+  const html = `<form id="edit-auction" class="bg-secondary border-dashed-grey-contrast-light padding-med border-radius-xs ">
                   <div>
-                    <div class="margin-left-right-xs flex flex-right">
-                    <i class="close-form fa-solid fa-x border-black border-radius-xs padding-xs color-black bg-white"></i>
+                    <div class="margin-left-right-xs flex flex-right cursor-pointer" aria-label="cancel edit this auction">
+                      <i class="close-form fa-solid fa-x border-black border-radius-xs padding-xs color-black bg-white"></i>
                     </div>
                   </div>
-                  <div>
-                    <label for"input">Input</label>
-                    <input id="input">
+                  <div class="flex flex-column">
+                    <label for="title">Title:</label>
+                    <input id="title" type="text" name="title" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Auction name" required>
                   </div>
+                  <div class="flex flex-column">
+                    <label for="description">description</label>
+                    <input id="description" name="description" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Item quality, brand, etc." required>
+                  </div>
+                  <div class="flex flex-column">
+                    <label for="tags">Tags: (separate,with,comma)</label>
+                    <input id="tags" name="tags" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="example,leather,jacket" required>
+                  </div>
+                  <div class="flex flex-column">
+                    <label for="media">Image url: </label>
+                    <input id="media" name="url" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="https://image.jpg" required>
+                  </div>
+                  <button name="submit" type="submit" class="btn bg-primary border-grey-contrast-slight color-white margin-xs">Submit</button>
                 </form>`;
   return html;
 };

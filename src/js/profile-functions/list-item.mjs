@@ -9,7 +9,7 @@ export function getFormData(form, event) {
         description: form.description.value,
         tags: form.tags.value,
         media: form.url.value,
-        //endsAt: "2023-05-25T14:32:17.579Z",
+        endsAt: form.ends.value,
     };
 
     return data;
@@ -24,8 +24,9 @@ export async function createAuction(user, token, data) {
             "description": data.description,
             "tags": tag,
             "media": media,
-            "endsAt": "2023-05-25T14:32:17.579Z",
+            "endsAt": data.endsAt,
         }
+        console.log(auctionBody)
         const postData = {
             method: "POST",
             body: JSON.stringify(auctionBody),
@@ -37,6 +38,11 @@ export async function createAuction(user, token, data) {
         console.log(postData)
         const response = await fetch(`https://nf-api.onrender.com/api/v1/auction/listings`, postData);
         console.log(response);
+        if(response.ok) {
+            window.location.reload();
+        } else {
+            alert("Something went wrong. Please try again");
+        };
     } catch(error) {
         console.log(error);
     };
@@ -46,15 +52,16 @@ export function listItem(container, profile, token) {
     const createForm = document.createElement("form");
     container.append(createForm)
     const form = container.querySelector("form");
+    console.log(form)
     form.innerHTML = html.auctionForm();
     form.addEventListener("submit", (event) => {
+        event.preventDefault();
         const tags = form.tags.value;
         console.log(tags)
-        event.preventDefault();
         if(tags.includes(" ")) {
             alert("Please do not ad spaces in the tags field. Instead,separate,words,with,comma");
         } else {
             createAuction(profile, token, getFormData(form, event));
-        }
+        };
     });
 };

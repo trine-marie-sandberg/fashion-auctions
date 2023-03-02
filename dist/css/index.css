@@ -700,6 +700,10 @@ footer {
   transition: 150ms;
 }
 
+.auction-cards-wrapper {
+  position: relative;
+}
+
 .card-img {
   height: auto;
   max-height: 150px;
@@ -824,6 +828,10 @@ li {
 
 .active-link {
   text-decoration: underline;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */

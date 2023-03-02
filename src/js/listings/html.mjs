@@ -1,5 +1,5 @@
 export function listingCards(highestBid, title, shortDescription, sortedTags, endsAt) {
-    const html = `<div class="center">
+    const html = `<div class="auction-cards-wrapper">
                     <a class="card even-columns bg-white padding-xs">
                       <div class="listing-info-wrap padding-left-right-sm">
                         <p class="margin-no">${highestBid}</p>
@@ -13,8 +13,8 @@ export function listingCards(highestBid, title, shortDescription, sortedTags, en
                       </div>
                     </a>
                     <div class="highlight-btns flex flex-between padding-xs">
-                      <button class="edit-card-btn bg-white color-black border-black padding-xs border-radius-xs" aria-label="edit this listing"><i class="fa-solid fa-pen-to-square"></i></button>
-                      <button class="delete-btn bg-white color-black border-black padding-xs border-radius-xs" aria-label="delete this listing"><i class="fa-solid fa-trash"></i></button>
+                      <button class="edit-card-btn bg-white color-black border-black padding-xs border-radius-xs cursor-pointer" aria-label="edit this listing"><i class="fa-solid fa-pen-to-square"></i></button>
+                      <button class="delete-btn bg-white color-black border-black padding-xs border-radius-xs cursor-pointer" aria-label="delete this listing"><i class="fa-solid fa-trash"></i></button>
                     </div>
                     <div class="edit-form"></div>
                   </div>`;

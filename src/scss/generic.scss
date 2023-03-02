@@ -39,7 +39,6 @@ p, li, button {
 .half-size-h {
     height: 50%;
 }
-
 .fit-content-h {
     height: fit-content;
 }
@@ -54,4 +53,7 @@ li {
 }
 .active-link {
     text-decoration: underline;
+}
+.cursor-pointer {
+    cursor: pointer;
 }
