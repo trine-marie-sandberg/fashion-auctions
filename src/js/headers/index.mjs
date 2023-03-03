@@ -26,3 +26,12 @@ export const put = {
         Authorization: `Bearer ${token}`,
     },
 };
+
+export const del = {
+
+    method: "DELETE",
+    headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+    },
+};

@@ -5,7 +5,7 @@ import { createAuction, getFormData, listItem } from "./list-item.mjs";
 import { getUserAuctions } from "./users-auctions.mjs";
 
 function profileHandler() {
-    
+    const loader = document.querySelector(".spinner");
     const token = local.storageLoad("accessToken");
     const profile = local.storageLoad("profile");
     const creditBtn = document.getElementById("get-credits");
@@ -69,6 +69,6 @@ function profileHandler() {
     });
 
     const userAuctionsContainer = document.querySelector(".card-container");
-    getUserAuctions(userAuctionsContainer);
+    getUserAuctions(userAuctionsContainer, loader);
 };
 profileHandler();

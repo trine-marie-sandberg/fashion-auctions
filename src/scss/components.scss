@@ -86,3 +86,30 @@ footer {
 .delete-btn {
   display: none;
 }
+//SPINNER
+@keyframes ScaleInOut {
+  0% {
+      transform: scale(0.8);
+  }
+
+  100% {
+      transform: scale(1.5);
+  }
+}
+@keyframes Rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid map-get($colours, "white");
+  background-color: map-get($colours, "secondary");
+  border-radius: 100%;
+  border-top-color: map-get($colours, "primary");
+  animation: Rotate 1.2s linear 0s infinite forwards;
+}

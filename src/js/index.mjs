@@ -3,21 +3,20 @@ import * as local from "./storage/localstorage.mjs";
 import { logInOutHandler, loginOutStyles } from "./menu-items/login-logout.mjs";
 import { listingsHandler } from "./listings/index.mjs";
 
+const loader = document.querySelector(".spinner");
 const listingsContainer = document.getElementById("listings-container");
-listingsHandler(listingsContainer);
+listingsHandler(listingsContainer, loader);
 
 const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 mobileMenuBtn.addEventListener("click", mobileMenu);
 
 const token = local.storageLoad("accessToken");
 const loginOutBtn = document.querySelector(".login-out-btn");
-
 loginOutBtn.addEventListener("click", () => {
-    
     logInOutHandler(loginOutBtn, token);   
 });
-
 loginOutStyles(loginOutBtn, token);
+
 const menuAccount = document.getElementById("account-menu");
 const avatar = document.querySelector(".avatar");
 const profile = local.storageLoad("profile");
@@ -33,7 +32,6 @@ function accountMenu(token, menuAccount) {
         } else {
             accountLink.style.display = "block";
             accountHref.style.display = "block";
-            console.log(accountLink)
             if(profile.avatar) {
                 avatar.src = profile.avatar;
                 avatar.alt = "My profile picture";

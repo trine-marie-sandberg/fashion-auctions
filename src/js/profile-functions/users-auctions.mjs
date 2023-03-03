@@ -4,7 +4,7 @@ import * as header from "../headers/index.mjs";
 import { getListings } from "../listings/get-listings.mjs";
 import { displayPost } from "../listings/create-listing-cards.mjs";
 
-export async function getUserAuctions(container){
+export async function getUserAuctions(container, loader){
     
     const profile = local.storageLoad("profile");
     const fetchOption = header.auth;
@@ -13,8 +13,9 @@ export async function getUserAuctions(container){
 
     try {
         const listingsArray = await getListings(auctionsUrl, fetchOption);
-        console.log(listingsArray)
-
+        if (listingsArray) {
+            loader.style.display = "none";
+        };
         container.append(...listingsArray.map(displayPost));
 
     } catch(error) {

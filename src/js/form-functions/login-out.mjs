@@ -20,24 +20,28 @@ async function handleData(data, url) {
         if(accessToken) {
             window.location.href = "../index.html";
         };
-
     } catch(error) {
         console.log(error);
     };
 };
 
 export function formHandler(loginUrl, registerUrl) {
+    
+    const loader = document.createElement("div");
+    const loaderClass = ["spinner"];
+    loader.classList.add(loaderClass);
 
 const registerForm = document.getElementById("register-form");
 if(registerForm) {
     return registerForm.addEventListener("submit", async (event) => {
         try {
+            registerForm.append(loader);
             const data = regiserData(registerForm, event);
             await handleData(data, registerUrl);
             await handleData(data, loginUrl);   
         } catch(error) {
             console.log(error);
-        }
+        };
     });
 };
 
@@ -45,6 +49,7 @@ const loginForm = document.getElementById("login-form");
 if(loginForm) {
     return loginForm.addEventListener("submit", async (event) => {
         try {
+            loginForm.append(loader);
             const data = loginData(loginForm, event);
             await handleData(data, loginUrl);
         } catch(error) {

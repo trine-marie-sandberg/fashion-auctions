@@ -1,7 +1,7 @@
 import * as html from "./html.mjs";
 import { editAuction } from "../profile-functions/edit-auction.mjs";
 
-export function displayPost(listing) {
+export function displayPost(listing, loader) {
 
     const cardWrap = document.createElement("div");
     const cardWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "padding-top-btm-med"];

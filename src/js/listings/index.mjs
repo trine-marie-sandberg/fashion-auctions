@@ -5,12 +5,15 @@ import * as endpoint from "../api-endpoints.mjs";
 import * as options from "../headers/index.mjs";
 import { bidHandler } from "./bid.mjs";
 
-export async function listingsHandler(listingsContainer) {
+export async function listingsHandler(listingsContainer, loader) {
     try {
 
         if(listingsContainer) {
 
             const listingsArray = await getListings(endpoint.api + endpoint.listings + endpoint.sortByTag, options.allListings);
+            if(listingsArray) {
+                loader.style.display = "none";
+            };
             listingsContainer.append(...listingsArray.map(displayPost));
         };
 
@@ -22,8 +25,10 @@ export async function listingsHandler(listingsContainer) {
 
             const productContainer = document.querySelector(".product-container");
             const productObject = await getListings(endpoint.api + endpoint.listings + id + endpoint.options);
+            if(productObject) {
+                loader.style.display = "none";
+            };
             productContainer.append(displayProduct(productObject));
-
             bidHandler(id);
         };
 

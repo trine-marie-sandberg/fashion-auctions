@@ -19,12 +19,13 @@ export async function createAuction(user, token, data) {
     try {
         const tag = data.tags.split(",");
         media.push(data.media);
+        const endsAt = data.endsAt;
         const auctionBody = {
             "title": data.title,
             "description": data.description,
             "tags": tag,
             "media": media,
-            "endsAt": data.endsAt,
+            "endsAt": endsAt,
         }
         console.log(auctionBody)
         const postData = {
