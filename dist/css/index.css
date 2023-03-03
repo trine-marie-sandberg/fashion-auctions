@@ -525,6 +525,9 @@
     font-size: 13px;
     max-width: 110px;
   }
+  #auction-form-container {
+    width: 80vw;
+  }
 }
 @media (min-width: 480px) {
   .login-form-bg {
@@ -545,6 +548,9 @@
   }
   .auth-background {
     background-image: url(https://www.dropbox.com/s/0fe852kfaxlwcwa/login-img-crop.jpg?raw=1);
+  }
+  #auction-form-container {
+    width: 50vw;
   }
 }
 @media (min-width: 1050px) {
@@ -581,6 +587,9 @@
   }
   .quote {
     font-size: 1rem;
+  }
+  #auction-form-container {
+    width: 40vw;
   }
 }
 @media (max-width: 720px) {

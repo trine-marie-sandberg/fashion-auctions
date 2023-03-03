@@ -35,17 +35,28 @@ export function userDetails(profile) {
 
 export function auctionForm() {
     const html =   `<form class="transparent-white border-grey-contrast-light border-radius-xs padding-xs" id="edit-avatar" onsubmit="return false">
-                      <label for="title">Title:</label>
-                      <input type="text" id="title" name="title" required>
-                      <label for="description">Description:</label>
-                      <input type="text" id="description" name="description" required>
-                      <label for="tags">Tags (separate,with,comma): </label>
-                      <input type="text" id="tags" name="tags" multiple arial-label="tags">
-                      <label for="media">Image url:</label>
-                      <input type="text" id="media" name="url">
-                      <div>
-                        <label for="ends">Ends: </label>
-                        <input id="ends" type="datetime-local" name="ends">
+                      <div class="margin-left-right-xs flex flex-right cursor-pointer" aria-label="cancel create auction">
+                        <i class="close-form fa-solid fa-x border-black border-radius-xs padding-xs color-black bg-white"></i>
+                      </div>
+                      <div class="flex flex-column">
+                        <label for="title" class="padding-top-btm-xs">Title:</label>
+                        <input id="title" type="text" name="title" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Auction name" required>
+                      </div>
+                      <div class="flex flex-column">
+                        <label for="description" class="padding-top-btm-xs">Description</label>
+                        <input id="description" name="description" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Item quality, brand, etc.">
+                      </div>
+                      <div class="flex flex-column">
+                        <label for="tags" class="padding-top-btm-xs">Tags(separate,with,comma):</label>
+                        <input id="tags" name="tags" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="example,leather,jacket">
+                      </div>
+                      <div class="flex flex-column">
+                        <label for="media" class="padding-top-btm-xs">Image url: </label>
+                        <input id="media" name="url" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="https://image.jpg">
+                      </div>
+                      <div class="flex flex-wrap margin-xs">
+                        <label for="ends" class="padding-xs">Auction ends: </label>
+                        <input id="ends" type="datetime-local" name="ends" class="border-radius-xs padding-xs" required>
                       </div>
                       <button type="submit" class="btn bg-primary color-white border-grey-contrast-dark">Submit</button>
                     </form>`;
@@ -53,7 +64,7 @@ export function auctionForm() {
 };
 
 export function edit() {
-  const html = `<form id="edit-auction" class="bg-secondary border-dashed-grey-contrast-light padding-med border-radius-xs ">
+  const html = `<form id="edit-auction" class="bg-secondary border-dashed-grey-contrast-light padding-med border-radius-xs">
                   <div>
                     <div class="margin-left-right-xs flex flex-right cursor-pointer" aria-label="cancel edit this auction">
                       <i class="close-form fa-solid fa-x border-black border-radius-xs padding-xs color-black bg-white"></i>
@@ -61,19 +72,19 @@ export function edit() {
                   </div>
                   <div class="flex flex-column">
                     <label for="title">Title:</label>
-                    <input id="title" type="text" name="title" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Auction name" required>
+                    <input id="title" type="text" name="title" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Auction name">
                   </div>
                   <div class="flex flex-column">
                     <label for="description">description</label>
-                    <input id="description" name="description" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Item quality, brand, etc." required>
+                    <input id="description" name="description" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Item quality, brand, etc.">
                   </div>
                   <div class="flex flex-column">
                     <label for="tags">Tags: (separate,with,comma)</label>
-                    <input id="tags" name="tags" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="example,leather,jacket" required>
+                    <input id="tags" name="tags" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="example,leather,jacket">
                   </div>
                   <div class="flex flex-column">
                     <label for="media">Image url: </label>
-                    <input id="media" name="url" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="https://image.jpg" required>
+                    <input id="media" name="url" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="https://image.jpg">
                   </div>
                   <button name="submit" type="submit" class="btn bg-primary border-grey-contrast-slight color-white margin-xs">Submit</button>
                 </form>`;

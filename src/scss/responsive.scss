@@ -50,6 +50,9 @@ $breakpoints: (
         font-size: 13px;
         max-width: 110px;
       }
+    #auction-form-container {
+        width: 80vw;
+    }
 }
 //Breakpoint sm
 @include breakpoint(map-get($breakpoints, "sm")) {
@@ -73,6 +76,9 @@ $breakpoints: (
     .auth-background {
         background-image: url(https://www.dropbox.com/s/0fe852kfaxlwcwa/login-img-crop.jpg?raw=1);
       }
+    #auction-form-container {
+        width: 50vw;
+    }
 }
 //breakpoint lg
 @include breakpoint(map-get($breakpoints, "lg")) {
@@ -111,6 +117,9 @@ $breakpoints: (
     .quote {
         font-size: 1rem;
       }
+    #auction-form-container {
+        width: 40vw;
+    }
 }
 
 // max-width
