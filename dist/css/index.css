@@ -490,7 +490,16 @@
 
 @media (min-width: 0) {
   h1, h2, h3 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2, h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 12px;
   }
   header, .login-out-btn {
     font-size: 1.5rem;
@@ -541,6 +550,15 @@
     font-size: 1rem;
     max-width: 200px;
   }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2, h3 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 15px;
+  }
 }
 @media (min-width: 720px) {
   #mobile-menu-btn {
@@ -551,6 +569,15 @@
   }
   #auction-form-container {
     width: 50vw;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
   }
 }
 @media (min-width: 1050px) {
