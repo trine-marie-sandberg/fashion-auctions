@@ -1,9 +1,7 @@
 import * as html from "./html.mjs";
 
 export function getFormData(form, event) {
-
     event.preventDefault();
-
     const data = {
         title: form.title.value,
         description: form.description.value,
@@ -11,14 +9,17 @@ export function getFormData(form, event) {
         media: form.url.value,
         endsAt: form.ends.value,
     };
-
     return data;
 };
+
 let media = [];
 export async function createAuction(user, token, data) {
     try {
         const tag = data.tags.split(",");
         media.push(data.media);
+        if(media.length = 0) {
+            media = [];
+        };
         const auctionBody = {
             "title": data.title,
             "description": data.description,
@@ -60,6 +61,7 @@ export function listItem(container, profile, token) {
         console.log(tags)
         if(tags.includes(" ")) {
             alert("Please do not ad spaces in the tags field. Instead,separate,words,with,comma");
+            console.log("alert")
         } else {
             createAuction(profile, token, getFormData(form, event));
         };

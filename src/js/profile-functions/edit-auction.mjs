@@ -21,6 +21,9 @@ export function editAuction(editBtn, form, delBtn, highlights, id) {
             const tags = editForm.tags.value;
             const tag = tags.split(",");
             media.push(editForm.media.value);
+            if(media.length = 0) {
+                media = [];
+            };
             const body = {
                 "title": editForm.title.value,
                 "description": editForm.description.value,

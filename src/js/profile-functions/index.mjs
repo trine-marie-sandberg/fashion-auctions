@@ -63,7 +63,6 @@ function profileHandler() {
 
     const listBtn = document.getElementById("new-auction");
     const auctionFormContainer = document.getElementById("auction-form-container");
-
     listBtn.addEventListener("click", () => {
         listItem(auctionFormContainer, profile, token);
     });
