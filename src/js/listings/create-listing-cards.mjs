@@ -9,9 +9,12 @@ export function displayPost(listing, loader) {
     let media = [listing.media];
 
     if(media.length === 0) {
-        media = ["./src/assets/img/placeholder-img.jpg"];
+        media = ["./placeholder-img.jpg"];
     } else {
-        media = media[0];
+
+        for(let i = 0; i < listing.media.length; i++) {
+          media = media[i];
+        };
     };
 
     let bidArray = [];

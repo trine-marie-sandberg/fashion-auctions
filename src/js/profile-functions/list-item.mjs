@@ -12,19 +12,21 @@ export function getFormData(form, event) {
     return data;
 };
 
-let media = [];
 export async function createAuction(user, token, data) {
     try {
         const tag = data.tags.split(",");
-        media.push(data.media);
-        if(media.length = 0) {
-            media = [];
+        let media = data.media.split(",");
+        let mediaArray = [];
+        mediaArray.push(...media);
+        if(mediaArray.length = 0) {
+            mediaArray = "";
         };
+
         const auctionBody = {
             "title": data.title,
             "description": data.description,
             "tags": tag,
-            "media": media,
+            "media": mediaArray,
             "endsAt": data.endsAt,
         }
         console.log(auctionBody)
