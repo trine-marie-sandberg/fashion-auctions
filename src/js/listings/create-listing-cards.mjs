@@ -6,13 +6,12 @@ export function displayPost(listing, loader) {
     const cardWrap = document.createElement("div");
     const cardWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "padding-top-btm-med"];
     cardWrap.classList.add(...cardWrapClasses);
-    let media = [listing.media];
+    let media = listing.media;
 
     if(media.length === 0) {
         media = ["https://gamehub-wp-api.one/gamehub/wp-content/uploads/2023/03/placeholder-img.jpg"];
     } else {
-
-        for(let i = 0; i < listing.media.length; i++) {
+        for(let i = 0; i < media[0].length; i++) {
           media = media[i];
         };
     };
