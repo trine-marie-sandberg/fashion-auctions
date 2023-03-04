@@ -757,6 +757,15 @@ footer {
   gap: 1rem;
 }
 
+.imgContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-container-img {
+  max-width: fit-content;
+}
+
 .users-auctions-wrap {
   padding: 0 5vw;
 }

@@ -56,6 +56,13 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
+.imgContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-container-img {
+  max-width: fit-content;
+}
 .users-auctions-wrap {
   padding: 0 5vw;
 }

@@ -23,7 +23,7 @@ export function listingCards(highestBid, title, shortDescription, sortedTags, en
 
 export function singleProduct(title, description, sellerName, sellerAvatar, highestBid, amountOfBids, created, tags, endsAt) {
     const html = `<div class="padding-sm">
-                    <div class="flex flex-wrap flex-between">
+                    <div class="flex flex-wrap flex-between border-btm-white">
                       <div>
                          <h1>${title}</h1>
                          <h2>Product description</h2>
