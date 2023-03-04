@@ -9,6 +9,16 @@ footer {
   height: 40px;
   width: 50px;
 }
+.search-results-wrap {
+  display: flex;
+  margin: 0 20vw;
+}
+.search-container {
+  background-color: map-get($colours, "secondary");
+  padding: 5px;
+  max-height: 700px;
+  overflow: auto;
+}
 .avatar {
   height: 50px;
   width: 50px;

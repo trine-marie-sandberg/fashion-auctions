@@ -2,6 +2,7 @@ import { mobileMenu } from "./menu-items/mobile-menu.js";
 import * as local from "./storage/localstorage.mjs";
 import { logInOutHandler, loginOutStyles } from "./menu-items/login-logout.mjs";
 import { listingsHandler } from "./listings/index.mjs";
+import { searchHandler } from "./search-filter/search.mjs";
 
 const loader = document.querySelector(".spinner");
 const listingsContainer = document.getElementById("listings-container");
@@ -41,3 +42,7 @@ function accountMenu(token, menuAccount) {
     };
 };
 accountMenu(token, menuAccount);
+
+const searchContainer = document.querySelector(".search-container");
+const searchBar = document.querySelector(".search");
+searchHandler(searchContainer, searchBar);

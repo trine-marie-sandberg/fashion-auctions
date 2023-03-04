@@ -1,6 +1,6 @@
 /* Error: Undefined variable.
  *    ,
- * 17 |   background-color: map-get($colours, "grey-contrast-light");
+ * 17 |   background-color: map-get($colours, "secondary");
  *    |                             ^^^^^^^^
  *    '
  *   src\scss\components.scss 17:29  root stylesheet */
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Undefined variable.\a    \2577 \a 17 \2502    background-color: map-get($colours, "grey-contrast-light");\d\a    \2502                              ^^^^^^^^\a    \2575 \a   src\\scss\\components.scss 17:29  root stylesheet';
+  content: 'Error: Undefined variable.\a    \2577 \a 17 \2502    background-color: map-get($colours, "secondary");\d\a    \2502                              ^^^^^^^^\a    \2575 \a   src\\scss\\components.scss 17:29  root stylesheet';
 }

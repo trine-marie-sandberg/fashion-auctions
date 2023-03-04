@@ -698,6 +698,18 @@ footer {
   width: 50px;
 }
 
+.search-results-wrap {
+  display: flex;
+  margin: 0 20vw;
+}
+
+.search-container {
+  background-color: #FBE8BC;
+  padding: 5px;
+  max-height: 700px;
+  overflow: auto;
+}
+
 .avatar {
   height: 50px;
   width: 50px;
@@ -859,6 +871,11 @@ p, li, button {
 .img-auto {
   height: auto;
   width: 100%;
+}
+
+.img-auto-reverse {
+  height: 100%;
+  width: auto;
 }
 
 .img-contain {
