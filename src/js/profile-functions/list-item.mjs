@@ -11,24 +11,23 @@ export function getFormData(form, event) {
     };
     return data;
 };
-
+let mediaArray = [];
 export async function createAuction(user, token, data) {
     try {
         const tag = data.tags.split(",");
         let media = data.media.split(",");
-        let mediaArray = [];
-        mediaArray.push(...media);
-        if(mediaArray.length = 0) {
-            mediaArray = "";
+        if(data.media.length === 0) {
+            media = "";
+            console.log("media0: ", mediaArray)
         };
-
+        mediaArray.push(...media);
         const auctionBody = {
             "title": data.title,
             "description": data.description,
             "tags": tag,
             "media": mediaArray,
             "endsAt": data.endsAt,
-        }
+        };
         console.log(auctionBody)
         const postData = {
             method: "POST",
