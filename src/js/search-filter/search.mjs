@@ -13,7 +13,6 @@ export async function searchHandler(container, searchBar) {
     searchBar.addEventListener("keyup", (event) => {
 
         const searchCharacters = event.target.value;
-        console.log(event.target.value)
         const searchString = searchCharacters.toLowerCase();
         
         let filteredList = listings.filter(listings => {
@@ -25,10 +24,14 @@ export async function searchHandler(container, searchBar) {
             let id = idArray.toString();
             const includeId = id.includes(searchString);
 
-            const description = [listings.description].toString();
+            const description = listings.description.toLowerCase();
             const includeDescription = description.includes(searchString);
 
-            return includeTitle + includeId + includeDescription;
+            const tagsArray = listings.tags;
+            let tags = tagsArray.toString();
+            const includeTags = tags.includes(searchString);
+
+            return includeTitle + includeId + includeDescription + includeTags;
         });
         container.style.display = "block";
         
