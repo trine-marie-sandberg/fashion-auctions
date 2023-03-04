@@ -1,6 +1,6 @@
 import { edit } from "./html.mjs";
 import { put, del } from "../headers/index.mjs";
-export function editAuction(editBtn, form, delBtn, highlights, id) {
+export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, prevDescription, prevTags, prevMedia) {
 
     highlights.style.backgroundColor = "#395658";
     //edit auction btn
@@ -14,16 +14,18 @@ export function editAuction(editBtn, form, delBtn, highlights, id) {
         wrapper.style.zIndex = "5";
         editBtn.style.display = "none";
         const editForm = form.querySelector("form");
+        editForm.title.value = prevTitle;
+        editForm.description.value = prevDescription;
+        editForm.tags.value =prevTags;
+        editForm.url.value = prevMedia;
         //editForm on submit
         editForm.addEventListener("submit", async (event) => {
             event.preventDefault();
-            let media = [];
+            let media = prevMedia;
             const tags = editForm.tags.value;
             const tag = tags.split(",");
             media.push(editForm.media.value);
-            if(media.length = 0) {
-                media = [];
-            };
+
             const body = {
                 "title": editForm.title.value,
                 "description": editForm.description.value,

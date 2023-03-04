@@ -83,7 +83,7 @@ export function displayPost(listing, loader) {
       const editFormWrap = cardWrap.querySelector(".edit-form");
       const highlightBtns = cardWrap.querySelector(".highlight-btns")
       editButton.style.display = "block";
-      editAuction(editButton, editFormWrap, delBtn, highlightBtns, id);
+      editAuction(editButton, editFormWrap, delBtn, highlightBtns, id, title, description, tags, media);
       if(editButton.style.display = "block") {
         delBtn.style.display = "block";
       };
