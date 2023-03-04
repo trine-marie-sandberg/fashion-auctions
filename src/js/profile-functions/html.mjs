@@ -77,7 +77,8 @@ export function edit() {
                   </div>
                   <div class="flex flex-column">
                     <label for="description">description</label>
-                    <input id="description" name="description" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Item quality, brand, etc.">
+                    <textarea id="description" name="description" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Item quality, brand, etc.">
+                    </textarea>
                   </div>
                   <div class="flex flex-column">
                     <label for="tags">Tags: (separate,with,comma)</label>

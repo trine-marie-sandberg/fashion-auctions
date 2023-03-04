@@ -22,15 +22,22 @@ export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, pr
         editForm.addEventListener("submit", async (event) => {
             event.preventDefault();
             let media = prevMedia;
+            let newMedia = editForm.media.value.split(",");
+            let mediaArray = [];
             const tags = editForm.tags.value;
             const tag = tags.split(",");
-            media.push(editForm.media.value);
+            if(newMedia === prevMedia) {
+                //do nothing
+            } else {
+                media = newMedia;
+                mediaArray = media;
+            };
 
             const body = {
                 "title": editForm.title.value,
                 "description": editForm.description.value,
                 "tags": tag,
-                "media": media,
+                "media": mediaArray,
             };
             const postData = {
                 method: put.method,
