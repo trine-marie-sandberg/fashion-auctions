@@ -51,7 +51,7 @@ export function auctionForm() {
                         <input id="tags" name="tags" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="example,leather,jacket">
                       </div>
                       <div class="flex flex-column">
-                        <label for="media" class="padding-top-btm-xs">Image url: </label>
+                        <label for="media" class="padding-top-btm-xs">Image url (ad multiple url's by separating,them,with,comma): </label>
                         <input id="media" name="url" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="https://image.jpg">
                       </div>
                       <div class="flex flex-wrap margin-xs">
@@ -85,7 +85,7 @@ export function edit() {
                     <input id="tags" name="tags" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="example,leather,jacket">
                   </div>
                   <div class="flex flex-column">
-                    <label for="media">Image url: </label>
+                    <label for="media">Image url (ad multiple url's by separating,them,with,comma): </label>
                     <input id="media" name="url" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="https://image.jpg">
                   </div>
                   <button name="submit" type="submit" class="btn bg-primary border-grey-contrast-slight color-white margin-xs">Submit</button>
