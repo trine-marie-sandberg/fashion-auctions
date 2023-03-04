@@ -9,7 +9,7 @@ export function displayPost(listing, loader) {
     let media = [listing.media];
 
     if(media.length === 0) {
-        media = ["./placeholder-img.jpg"];
+        media = ["https://gamehub-wp-api.one/gamehub/wp-content/uploads/2023/03/placeholder-img.jpg"];
     } else {
 
         for(let i = 0; i < listing.media.length; i++) {

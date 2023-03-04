@@ -6,7 +6,7 @@ export function listingCards(highestBid, title, shortDescription, sortedTags, en
                         <h2 class="listing-name margin-xs">${title}</h2>
                       </div>
                       <div>
-                        <img class="card-img" onerror="this.onerror=null; this.src='./src/assets/img/placeholder-img.jpg';">
+                        <img class="card-img" onerror="this.onerror=null; this.src='https://gamehub-wp-api.one/gamehub/wp-content/uploads/2023/03/placeholder-img.jpg';">
                         <p class="padding-left-right-sm">${shortDescription}</p>
                         <p class="padding-left-right-sm">Tags: ${sortedTags}</p>
                         <p class="padding-left-right-sm">Ends: ${endsAt}</p>
