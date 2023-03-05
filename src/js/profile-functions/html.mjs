@@ -56,7 +56,7 @@ export function auctionForm() {
                         <input id="ends" type="datetime-local" name="ends" class="border-radius-xs padding-xs" required>
                       </div>
                       <div id="form-error-create"></div>
-                      <button type="submit" class="btn bg-primary color-white border-grey-contrast-dark">Submit</button>
+                      <button type="submit" class="btn bg-primary color-white border-grey-contrast-dark cursor-pointer">Submit</button>
                     </form>`;
  return html;
 };
