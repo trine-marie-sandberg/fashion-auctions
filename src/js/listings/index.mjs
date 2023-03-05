@@ -7,10 +7,8 @@ import { bidHandler } from "./bid.mjs";
 
 export async function listingsHandler(listingsContainer, loader) {
     try {
-
         if(listingsContainer) {
-
-            const listingsArray = await getListings(endpoint.api + endpoint.listings + endpoint.sortByTag, options.allListings);
+            const listingsArray = await getListings(endpoint.api + endpoint.listings + endpoint.sortByTag + "&_active=true", options.allListings);
             if(listingsArray) {
                 loader.style.display = "none";
             };
