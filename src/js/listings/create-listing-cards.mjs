@@ -83,9 +83,11 @@ export function displayPost(listing, loader) {
       const editButton = cardWrap.querySelector(".edit-card-btn");
       const delBtn = cardWrap.querySelector(".delete-btn");
       const editFormWrap = cardWrap.querySelector(".edit-form");
-      const highlightBtns = cardWrap.querySelector(".highlight-btns")
+      const highlightBtns = cardWrap.querySelector(".highlight-btns");
+      const dialogBox = document.createElement("div");
+      editFormWrap.append(dialogBox);
       editButton.style.display = "block";
-      editAuction(editButton, editFormWrap, delBtn, highlightBtns, id, title, description, tags, media);
+      editAuction(editButton, editFormWrap, delBtn, highlightBtns, id, title, description, tags, media, dialogBox);
       if(editButton.style.display = "block") {
         delBtn.style.display = "block";
       };

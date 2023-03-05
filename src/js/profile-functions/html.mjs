@@ -92,3 +92,12 @@ export function edit() {
                 </form>`;
   return html;
 };
+
+export function dialog() {
+  const html = `<p class="padding-xs">Are you sure you want to delete this auction?</p>
+                <div class="flex flex-between padding-xs">
+                  <button class="yes-btn btn bg-red border-grey-contrast-slight color-white">Yes</button>
+                  <button class="no-btn btn bg-primary border-grey-contrast-slight color-white">No</button>
+                </div>`;
+  return html;
+};

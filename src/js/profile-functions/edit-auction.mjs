@@ -1,9 +1,10 @@
 import { edit } from "./html.mjs";
 import { put, del } from "../headers/index.mjs";
-export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, prevDescription, prevTags, prevMedia) {
+import { dialog } from "./html.mjs";
+export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, prevDescription, prevTags, prevMedia, dialogBox) {
 
     highlights.style.backgroundColor = "#395658";
-    //edit auction btn
+
     editBtn.addEventListener("click", () => {
         const wrapper = document.createElement("div");
         form.append(wrapper)
@@ -18,7 +19,7 @@ export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, pr
         editForm.description.value = prevDescription;
         editForm.tags.value =prevTags;
         editForm.url.value = prevMedia;
-        //editForm on submit
+
         editForm.addEventListener("submit", async (event) => {
             event.preventDefault();
             let media = prevMedia;
@@ -57,7 +58,7 @@ export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, pr
                 console.log(error);
             }
         });
-        //cancel/close editForm
+
         const closeBtn = wrapper.querySelector(".close-form");
         closeBtn.addEventListener("click", () => {
             wrapper.style.display = "none";
@@ -66,16 +67,20 @@ export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, pr
     });
 
     delBtn.addEventListener("click", async () => {
-        console.log("delete workin?");
-        confirm("Do you want to permanently delete this auction?");
-        const postData = {
-            method: del.method,
-            headers: del.headers,
-        };
-        if(confirm("Do you want to permanently delete this auction?") == false) {
-            //do nothing
-        } else if(confirm("Do you want to permanently delete this auction?") == true) {
+        dialogBox.style.display = "block";
+        dialogBox.innerHTML = dialog();
+        const noBtn = dialogBox.querySelector(".no-btn");
+        noBtn.addEventListener("click", () => {
+            dialogBox.style.display = "none";
+        });
+        const yesBtn = dialogBox.querySelector(".yes-btn");
+        yesBtn.addEventListener("click", async () => {
             try {
+                const postData = {
+                    method: del.method,
+                    headers: del.headers,
+                };
+                console.log(postData)
                 const response = await fetch(`https://nf-api.onrender.com/api/v1/auction/listings/${id}`, postData);
                 console.log(response);
     
@@ -87,7 +92,6 @@ export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, pr
             } catch(error) {
                 console.log(error);
             }
-        };
-        console.log(postData)
+        });
     });
 };
