@@ -1,5 +1,6 @@
 import * as html from "./html.mjs";
 import { editAuction } from "../profile-functions/edit-auction.mjs";
+import { countdown } from "./time.mjs";
 
 export function displayPost(listing, loader) {
 
@@ -77,7 +78,8 @@ export function displayPost(listing, loader) {
     };
     const title = listing.title;
     const endsAt = listing.endsAt;
-    cardWrap.innerHTML = html.listingCards(highestBid, title, shortDescription, sortedTags, endsAt);
+    const daysLeft = countdown(endsAt);
+    cardWrap.innerHTML = html.listingCards(highestBid, title, shortDescription, sortedTags, daysLeft);
 
     if(window.location.href.includes("/my-account/")) {
       const editButton = cardWrap.querySelector(".edit-card-btn");

@@ -9,7 +9,7 @@ export function listingCards(highestBid, title, shortDescription, sortedTags, en
                         <img class="card-img" onerror="this.onerror=null; this.src='https://gamehub-wp-api.one/gamehub/wp-content/uploads/2023/03/placeholder-img.jpg';">
                         <p class="padding-left-right-sm">${shortDescription}</p>
                         <p class="padding-left-right-sm">Tags: ${sortedTags}</p>
-                        <p class="padding-left-right-sm">Ends: ${endsAt}</p>
+                        <p class="padding-left-right-sm">Ends in ${endsAt}</p>
                       </div>
                     </a>
                     <div class="highlight-btns flex flex-between padding-xs">

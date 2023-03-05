@@ -25,7 +25,8 @@ export function displayProduct(product) {
     const created = product.created;
     const tags = product.tags;
     const endsAt = product.endsAt;
-    productWrap.innerHTML = singleProduct(title, description, sellerName, sellerAvatar, highestBid, amountOfBids, created, tags, endsAt);
+    const d = new Date(endsAt);
+    productWrap.innerHTML = singleProduct(title, description, sellerName, sellerAvatar, highestBid, amountOfBids, created, tags, d);
 
     const imgContainer = productWrap.querySelector(".imgContainer");
     let media = product.media;
