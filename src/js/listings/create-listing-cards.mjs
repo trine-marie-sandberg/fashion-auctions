@@ -5,7 +5,7 @@ import { countdown } from "./time.mjs";
 export function displayPost(listing, loader) {
 
     const cardWrap = document.createElement("div");
-    const cardWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "padding-top-btm-med"];
+    const cardWrapClasses = ["card-wrap", "bg-grey-bg-card", "border-white", "border-radius-xs", "padding-top-btm-med", "fit-content-w"];
     cardWrap.classList.add(...cardWrapClasses);
     let media = listing.media;
 
