@@ -15,7 +15,7 @@
 <body class="bg-grey-bg flex flex-column auth-background">
     <header class="flex flex-between flex-center-h bg-white color-black border-btm-grey-contrast-slight">
         <div class="flex flex-center-h">
-            <img src="../src/assets/img/logo.png" class="logo">
+            <img src="../src/assets/img/logo.png" class="logo" alt="Our logo. Shadow-like image of a shoe.">
             <nav class="nav flex flex-center-v">
                 <ul class="topnav flex" id="topnav">
                     <li class="padding-xs"><a href="../index.html" class="nav-link">Listings</a></li>
@@ -29,7 +29,8 @@
         </div>
         <div class="flex flex-center-v">
             <i class="fa-solid fa-magnifying-glass padding-xs"></i>
-            <input type="text" class="search half-size-h border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs">
+            <label for="search" style="display: none;">Search</label>
+            <input type="text" id="search" class="search half-size-h border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs">
         </div>
     </header>
     <main>
