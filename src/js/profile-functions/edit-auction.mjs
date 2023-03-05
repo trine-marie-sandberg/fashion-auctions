@@ -7,7 +7,7 @@ export function editAuction(editBtn, form, delBtn, highlights, id, prevTitle, pr
 
     editBtn.addEventListener("click", () => {
         const wrapper = document.createElement("div");
-        form.append(wrapper)
+        form.append(wrapper);
         wrapper.innerHTML = edit();
         wrapper.style.display = "block";
         wrapper.style.position = "absolute";

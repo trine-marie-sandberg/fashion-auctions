@@ -9,7 +9,6 @@ export async function getUserAuctions(container, loader){
     const profile = local.storageLoad("profile");
     const fetchOption = header.auth;
     const auctionsUrl = url.api + `profiles/${profile.name}/listings`;
-    console.log(auctionsUrl, fetchOption);
 
     try {
         const listingsArray = await getListings(auctionsUrl, fetchOption);

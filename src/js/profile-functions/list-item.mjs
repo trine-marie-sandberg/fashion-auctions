@@ -54,7 +54,7 @@ export function listItem(container, profile, token) {
     const createForm = document.createElement("form");
     container.append(createForm)
     const form = container.querySelector("form");
-    const formClasses = ["bg-white", "padding-med", "border-grey-contrast-slight", "border-radius-xs"];
+    const formClasses = ["bg-white", "padding-xs"];
     form.classList.add(...formClasses)
     console.log(form)
     form.innerHTML = html.auctionForm();

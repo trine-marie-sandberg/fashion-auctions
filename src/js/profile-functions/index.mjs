@@ -57,10 +57,29 @@ function profileHandler() {
 
     const profileContainer = document.querySelector(".my-profile");
     profileContainer.innerHTML = html.userDetails(profile);
-
+    
     const listBtn = document.getElementById("new-auction");
     const auctionFormContainer = document.getElementById("auction-form-container");
+    const classes = ["bg-white", "border-radius-xs", "border-grey-contrast-slight"];
+    auctionFormContainer.classList.add(...classes);
+    auctionFormContainer.style.display = "none";
+    let cancelForm = document.createElement("div");
+
+    cancelForm. innerHTML = `<div class="flex flex-right">
+                               <button aria-label="cancel edit this auction" class="border-black border-radius-xs padding-xs color-black bg-white cursor-pointer">
+                                 <i class="close-form fa-solid fa-x"></i>
+                               </button>
+                             </div>`;
+                             
+    auctionFormContainer.append(cancelForm);
+    cancelForm.style.display = "none";
+    
     listBtn.addEventListener("click", () => {
+        cancelForm.style.display = "block";
+        auctionFormContainer.style.display = "block";
+        cancelForm.addEventListener("click", () => {
+            auctionFormContainer.style.display = "none";
+        });
         listItem(auctionFormContainer, profile, token);
     });
 

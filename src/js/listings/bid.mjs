@@ -51,7 +51,7 @@ export function bidHandler(id, product) {
                     if(response.status === 403) {
                         alert("Biding on your own auctions is not allowed");
                     };
-                    alert("Something went wrong. Please make sure your bid is higher than current highest bid.")
+                    alert("Something went wrong. Please try again later.")
                 };
             } catch(error) {
                 console.log(error);

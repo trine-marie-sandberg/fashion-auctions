@@ -35,9 +35,6 @@ export function userDetails(profile) {
 
 export function auctionForm() {
     const html =   `<form>
-                      <div class="margin-left-right-xs flex flex-right cursor-pointer" aria-label="cancel create auction">
-                        <i class="close-form fa-solid fa-x border-black border-radius-xs padding-xs color-black bg-white"></i>
-                      </div>
                       <div class="flex flex-column">
                         <label for="title" class="padding-top-btm-xs">Title:</label>
                         <input id="title" type="text" name="title" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Auction name" required>
