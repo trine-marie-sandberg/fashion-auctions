@@ -34,7 +34,7 @@ export function userDetails(profile) {
 };
 
 export function auctionForm() {
-    const html =   `<form class="transparent-white border-grey-contrast-light border-radius-xs padding-xs" id="edit-avatar" onsubmit="return false">
+    const html =   `<form>
                       <div class="margin-left-right-xs flex flex-right cursor-pointer" aria-label="cancel create auction">
                         <i class="close-form fa-solid fa-x border-black border-radius-xs padding-xs color-black bg-white"></i>
                       </div>
@@ -47,7 +47,7 @@ export function auctionForm() {
                         <input id="description" name="description" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="Item quality, brand, etc.">
                       </div>
                       <div class="flex flex-column">
-                        <label for="tags" class="padding-top-btm-xs">Tags(separate,with,comma):</label>
+                        <label for="tags" class="padding-top-btm-xs">Tags(separate,with,comma. fashion added by default):</label>
                         <input id="tags" name="tags" type="text" class="border-grey-contrast-slight box-shaddow-grey-contrast-slight border-radius-xs padding-xs" placeholder="example,leather,jacket">
                       </div>
                       <div class="flex flex-column">

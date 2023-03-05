@@ -5,7 +5,7 @@ export function getFormData(form, event) {
     const data = {
         title: form.title.value,
         description: form.description.value,
-        tags: form.tags.value,
+        tags: "fashion," + form.tags.value,
         media: form.url.value,
         endsAt: form.ends.value,
     };
@@ -54,6 +54,8 @@ export function listItem(container, profile, token) {
     const createForm = document.createElement("form");
     container.append(createForm)
     const form = container.querySelector("form");
+    const formClasses = ["bg-white", "padding-med", "border-grey-contrast-slight", "border-radius-xs"];
+    form.classList.add(...formClasses)
     console.log(form)
     form.innerHTML = html.auctionForm();
     form.addEventListener("submit", (event) => {
