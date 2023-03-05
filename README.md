@@ -10,6 +10,7 @@ Fashion Auctions is a fashion auction house that enables users to view, list, ed
 - Html
 - Vanilla JavaScript
 - Sass
+- CSS
 
 ## Geting Started
 
