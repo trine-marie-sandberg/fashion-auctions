@@ -31,14 +31,14 @@ export function singleProduct(title, description, sellerName, sellerAvatar, high
                       </div>
                         <div class="bid-and-seller border-radius-xs bg-white padding-sm border-xl fit-content-h margin-xs">
                           <div class="flex flex-wrap padding-xs">
-                              <h3>${sellerName}</h3>
+                              <h3>Sold by ${sellerName}</h3>
                           <div>
                               <img src="${sellerAvatar}" class="avatar margin-left-right-xs">
                           </div>
                            </div>
                              <p>Current highest bid: $ ${highestBid}</p>
                              <p>Bids: ${amountOfBids}</p>
-                             <button class="bid-btn btn bg-primary color-white border-grey-contrast-dark">Make a bid</button>
+                             <button class="bid-btn btn bg-secondary color-black border-grey-contrast-dark cursor-pointer">Make a bid</button>
                            </div> 
                         </div>
                         <div class="imgContainer margin-top-btm-sm"></div>

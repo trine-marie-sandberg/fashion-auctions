@@ -27,7 +27,7 @@ export async function listingsHandler(listingsContainer, loader) {
                 loader.style.display = "none";
             };
             productContainer.append(displayProduct(productObject));
-            bidHandler(id);
+            bidHandler(id, productObject);
         };
 
     } catch(error) {
