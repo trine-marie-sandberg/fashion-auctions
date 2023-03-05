@@ -3,7 +3,7 @@ Semester project 2
 
 [Deployment](https://trine-marie-sandberg.github.io/fashion-auctions/product-details/?id=0e738a56-5861-4975-a220-0331dad6b24f)
 
-##Description
+## Description
 Fashion Auctions is a fashion auction house that enables users to view, list, edit and bid on auctions. Created for my semester project during my front end development studies at Noroff.
 
 ## Built with
