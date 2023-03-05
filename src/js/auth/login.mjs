@@ -1,8 +1,6 @@
 export async function login(userToLogin) {
-        //Login endpoint
         const loginUrl = "https://nf-api.onrender.com/api/v1/social/auth/login";
-    
-        //Data to POST
+
         const postData = {
             method: "POST",
             headers: {
@@ -10,15 +8,11 @@ export async function login(userToLogin) {
             },
             body: JSON.stringify(userToLogin),
         };
-    
         try {
-    
             const response = await fetch(loginUrl, postData);
-    
             const { accessToken, ...profile } = await response.json();
             storageSave("accessToken", accessToken);
             storageSave("profile", profile);
-    
         } catch (error) {
             console.log(error);
         } finally {
