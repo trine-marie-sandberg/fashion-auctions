@@ -7,7 +7,7 @@ import { displayResults } from "./html.mjs";
 export async function searchHandler(container, searchBar) {
 
     const data = allListings;
-    const listings = await getListings(endpoint.api + endpoint.listings + endpoint.sortByTag, data);
+    const listings = await getListings(endpoint.api + endpoint.listings + endpoint.sortByTag + "&_active=true", data);
     container.style.display = "none";
 
     searchBar.addEventListener("keyup", (event) => {
