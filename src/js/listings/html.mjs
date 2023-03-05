@@ -31,7 +31,7 @@ export function singleProduct(title, description, sellerName, sellerAvatar, high
                       </div>
                         <div class="bid-and-seller border-radius-xs bg-white padding-sm border-xl fit-content-h margin-xs">
                           <div class="flex flex-wrap padding-xs">
-                              <h3>Sold by ${sellerName}</h3>
+                              <h3>Seller: ${sellerName}</h3>
                           <div>
                               <img src="${sellerAvatar}" class="avatar margin-left-right-xs">
                           </div>
