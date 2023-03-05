@@ -710,6 +710,10 @@ footer {
   overflow: auto;
 }
 
+.search {
+  padding: 8px;
+}
+
 .avatar {
   height: 50px;
   width: 50px;
